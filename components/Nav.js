@@ -9,6 +9,12 @@ import {
 } from 'react-icons/hi2';
 import Link from 'next/link'
 import {useRouter} from "next/router"
+//framer motion
+import { motion } from "framer-motion"
+
+//variants
+import { fadeIn } from "../variants"
+
 
 // nav data
 export const navData = [
@@ -30,15 +36,15 @@ export const navData = [
 
 const Nav = () => {
   const router = useRouter()
-  return <nav className="fixed bottom-[20px] xl:w-[30%] z-50 lg:w-[40%] md:w-[50%] w-[90%] left-1/2 -translate-x-1/2 drop-shadow-2xl"> 
-    <div className="w-full rounded-full backdrop-blur-ms bg-white/30 px-2">
+  return <nav className="fixed bottom-[20px] xl:w-[30%] z-10 lg:w-[40%] md:w-[50%] w-[90%] left-1/2 -translate-x-1/2 drop-shadow-2xl"> 
+    <motion.div variants={fadeIn('up', 1)} initial="hidden" animate="show" exit="hidden" className="w-full rounded-full backdrop-blur-ms bg-white/30 px-2">
     <ul className="flex items-center justify-between h-full">
       {
         navData.map((item) => <li key={item.name} className={`text-white hover:text-accent py-2 transition-all duration-300 rounded-full `}><Link href={item.path} className={`p-[12px] drop-shadow-2xl rounded-full block ${router.pathname === item.path && "text-accent bg-white" }`}><span className="text-lg">{item.icon}</span></Link></li>)
       }
 
     </ul>
-    </div>
+    </motion.div>
   </nav>;
 };
 
