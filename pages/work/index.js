@@ -1,5 +1,7 @@
+import ParticlesContainer from "./../../components/ParticlesContainer"
+
 const Work = () => {
-  return <div>Work</div>;
+  return <></>;
 };
 
 export default Work;
