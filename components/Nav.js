@@ -30,7 +30,7 @@ export const navData = [
 
 const Nav = () => {
   const router = useRouter()
-  return <nav className="fixed bottom-[20px] xl:w-[30%] lg:w-[40%] md:w-[50%] w-[90%] left-1/2 -translate-x-1/2 drop-shadow-2xl"> 
+  return <nav className="fixed bottom-[20px] xl:w-[30%] z-50 lg:w-[40%] md:w-[50%] w-[90%] left-1/2 -translate-x-1/2 drop-shadow-2xl"> 
     <div className="w-full rounded-full backdrop-blur-ms bg-white/30 px-2">
     <ul className="flex items-center justify-between h-full">
       {
