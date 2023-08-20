@@ -4,10 +4,10 @@ import Link from "next/link"
 const Socials = () => {
   return  <div className="social-list">
   <ul className="flex justify-between">
-    <li><Link href="" className="xl:text-[25px] text-[20px] p-3 m-3 block"><FaFacebookF/></Link></li>
-    <li><Link href="" className="xl:text-[25px] text-[20px] p-3 m-3 block"><FaTelegram/></Link></li>
-    <li><Link href="" className="xl:text-[25px] text-[20px] p-3 m-3 block"><FaLinkedinIn/></Link></li>
-    <li><Link href="" className="xl:text-[25px] text-[20px] p-3 m-3 block"><FaInstagram/></Link></li>
+    <li><Link href="" className="xl:text-[25px] text-[20px] p-3 xl:m-3 block"><FaFacebookF/></Link></li>
+    <li><Link href="" className="xl:text-[25px] text-[20px] p-3 xl:m-3 block"><FaTelegram/></Link></li>
+    <li><Link href="" className="xl:text-[25px] text-[20px] p-3 xl:m-3 block"><FaLinkedinIn/></Link></li>
+    <li><Link href="" className="xl:text-[25px] text-[20px] p-3 xl:m-3 block"><FaInstagram/></Link></li>
   </ul>
 </div>;
 };
