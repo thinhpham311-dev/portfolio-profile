@@ -35,7 +35,7 @@ const ParticlesContainer = () => {
           },
           resize: true
         },
-        mode: {
+        modes: {
           push: {
             quantity: 90
           },
@@ -55,6 +55,9 @@ const ParticlesContainer = () => {
           enable: true,
           opacity: 0.5,
           width: 1
+        },
+        collisions: {
+          enable: true
         },
         move:{
           directions: 'none',
