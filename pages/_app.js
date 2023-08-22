@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return <Layout>
     <AnimatePresence mode="wait">
-      <motion.div key={router.route} className="h-[calc(100%-98px)] bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+      <motion.div key={router.route} className="h-[calc(100%-210px)]">
         <Transition/>
       <Component {...pageProps} />
       </motion.div>

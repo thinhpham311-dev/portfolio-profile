@@ -1,7 +1,7 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Avatar from '../../components/Avatar';
-import {FaFigma, FaHtml5, FaCss3, FaJs, FaReact} from 'react-icons/fa'
-import {SiAdobexd, SiAdobephotoshop, SiNextdotjs, SiFramer, FaWordpress} from 'react-icons/si'
+import { FaFigma, FaHtml5, FaCss3, FaJs, FaReact } from 'react-icons/fa'
+import { SiAdobexd, SiAdobephotoshop, SiNextdotjs, SiFramer, FaWordpress } from 'react-icons/si'
 import parse from 'html-react-parser';
 
 //  data
@@ -79,31 +79,31 @@ const aboutData = [
 
 const About = () => {
   const [index, setIndex] = useState(0)
-  return <div className="pt-40 pb-32  gap-x-6">
-    <div className="container mx-auto">
+  return <div className="z-10 xl:py-20 h-full">
+    <div className="container mx-auto h-full">
       <div className="flex gap-x-4 xl:gap-x-8 xl:mx-0 justify-center z-10 ">
-          {
-            aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${indexItem === index && "after:!bg-accent after:w-full after:transition-all after:duration-300 text-accent"} cursor-pointer relative capitalize after:absolute after:left-0 after:-bottom-[10px] after:h-[2px] after:w-8  after:bg-white`}>{item.title}</div>)
-          }
+        {
+          aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${indexItem === index && "after:!bg-accent after:w-full after:transition-all after:duration-300 text-accent"} cursor-pointer relative capitalize after:absolute after:left-0 after:-bottom-[10px] after:h-[2px] after:w-8  after:bg-white`}>{item.title}</div>)
+        }
       </div>
-      <div className="tab-content my-[30px] xl:mx-0 mx-[8px] overflow-y-auto z-10">
+      <div className=" my-[30px] xl:my-[50px] xl:mx-0 mx-[8px] z-10 h-[calc(100%-50px)]  overflow-y-auto">
         {
           aboutData[index].info.map((item, indexItem) => <div key={indexItem} className="flex flex-wrap gap-5">
             <div className="xl:w-5/12 w-full">
               {
-                item?.image && <div className="flex justify-center items-center"><Avatar source={item?.image?.link} _w={item?.image?.w} _h={item?.image?.h}/></div>
+                item?.image && <div className="flex justify-center items-center"><Avatar source={item?.image?.link} _w={item?.image?.w} _h={item?.image?.h} /></div>
               }
             </div>
             <div className="xl:w-6/12 w-full">
-            {item?.introduce&&<h1 className="h1">{parse(item?.introduce)}</h1>}
-            {item?.content&&<p>{item?.content}</p>}
-            {item?.title&&<p>{item?.title}</p>}
+              {item?.introduce && <h1 className="h1">{parse(item?.introduce)}</h1>}
+              {item?.content && <p>{item?.content}</p>}
+              {item?.title && <p>{item?.title}</p>}
             </div>
           </div>)
         }
       </div>
     </div>
-  </div>;
+  </div>
 };
 
 export default About;
