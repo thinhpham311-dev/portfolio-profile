@@ -1,9 +1,7 @@
 import Image from 'next/image'
 
-const Avatar = () => {
-  return <div className="hidden xl:flex xl:max-w-none">
-    <Image src="/avatar.png" width={737} height={678} alt="" className="translate-z-0 w-full h-full"/>
-  </div>;
+const Avatar = ({_w, _h, source}) => {
+  return <Image src={source} width={_w} height={_h} alt="" className="translate-z-0"/>;
 };
 
 export default Avatar;

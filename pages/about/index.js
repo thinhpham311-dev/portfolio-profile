@@ -1,8 +1,25 @@
+import {useState} from 'react'
+import Avatar from '../../components/Avatar';
 import {FaFigma, FaHtml5, FaCss3, FaJs, FaReact} from 'react-icons/fa'
 import {SiAdobexd, SiAdobephotoshop, SiNextdotjs, SiFramer, FaWordpress} from 'react-icons/si'
+import parse from 'html-react-parser';
 
 //  data
 const aboutData = [
+  {
+    title: 'about me',
+    info: [
+      {
+        introduce: `I'm <span class="text-accent">Web Developer</span>`,
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+        image: {
+          w: 400,
+          h: 550,
+          link: '/avatar.png'
+        }
+      },
+    ],
+  },
   {
     title: 'skills',
     info: [
@@ -21,19 +38,6 @@ const aboutData = [
       {
         title: 'UI/UX Design',
         icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
-    ],
-  },
-  {
-    title: 'awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
       },
     ],
   },
@@ -74,7 +78,32 @@ const aboutData = [
 ];
 
 const About = () => {
-  return <div>About</div>;
+  const [index, setIndex] = useState(0)
+  return <div className="bg-primary/60 h-full py-32  z-10 gap-x-6">
+    <div className="container mx-auto">
+      <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 justify-center">
+          {
+            aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${indexItem === index && "after:bg-accent after:w-full after:transition-all after:duration-300 text-accent"} cursor-pointer relative capitalize after:absolute after:left-0 after:-bottom-[10px] after:h-[2px] after:w-8  after:bg-white`}>{item.title}</div>)
+          }
+      </div>
+      <div className="tab-content py-[50px]">
+        {
+          aboutData[index].info.map((item, indexItem) => <div key={indexItem} className="flex flex-wrap gap-5">
+            <div className="xl:w-5/12 w-full ">
+              {
+                item?.image && <div className="mx-auto"><Avatar source={item?.image?.link} _w={item?.image?.w} _h={item?.image?.h}/></div>
+              }
+            </div>
+            <div className="xl:w-6/12 w-full">
+            {item?.introduce&&<h1 className="h1">{parse(item?.introduce)}</h1>}
+            {item?.content&&<p>{item?.content}</p>}
+            {item?.title&&<p>{item?.title}</p>}
+            </div>
+          </div>)
+        }
+      </div>
+    </div>
+  </div>;
 };
 
 export default About;
