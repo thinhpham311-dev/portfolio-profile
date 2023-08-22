@@ -9,12 +9,10 @@ const sora = Sora({
 import TopLeftImg from "./TopLeftImg"
 import Nav from "./Nav"
 import Header from "./Header"
-import ParticlesContainer from "./../components/ParticlesContainer"
 
 
 const Layout = ({children}) => {
   return <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable}`}>
-    <ParticlesContainer/>
     <TopLeftImg/>
     <Nav/>
     <Header/>

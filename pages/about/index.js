@@ -10,7 +10,7 @@ const aboutData = [
     title: 'about me',
     info: [
       {
-        introduce: `I'm <span class="text-accent">Web Developer</span>`,
+        introduce: `I'm <br/><span class="text-accent">Web Developer</span>`,
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
         image: {
           w: 400,
@@ -79,19 +79,19 @@ const aboutData = [
 
 const About = () => {
   const [index, setIndex] = useState(0)
-  return <div className="bg-primary/60 h-full py-32  z-10 gap-x-6">
+  return <div className="bg-primary/60 h-full py-32  gap-x-6">
     <div className="container mx-auto">
-      <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 justify-center">
+      <div className="flex gap-x-4 xl:gap-x-8 xl:mx-0 justify-center z-10 ">
           {
-            aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${indexItem === index && "after:bg-accent after:w-full after:transition-all after:duration-300 text-accent"} cursor-pointer relative capitalize after:absolute after:left-0 after:-bottom-[10px] after:h-[2px] after:w-8  after:bg-white`}>{item.title}</div>)
+            aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${indexItem === index && "after:!bg-accent after:w-full after:transition-all after:duration-300 text-accent"} cursor-pointer relative capitalize after:absolute after:left-0 after:-bottom-[10px] after:h-[2px] after:w-8  after:bg-white`}>{item.title}</div>)
           }
       </div>
-      <div className="tab-content py-[50px]">
+      <div className="tab-content my-[30px] xl:mx-0 mx-[8px] overflow-y-auto h-[64vh] z-10">
         {
           aboutData[index].info.map((item, indexItem) => <div key={indexItem} className="flex flex-wrap gap-5">
-            <div className="xl:w-5/12 w-full ">
+            <div className="xl:w-5/12 w-full">
               {
-                item?.image && <div className="mx-auto"><Avatar source={item?.image?.link} _w={item?.image?.w} _h={item?.image?.h}/></div>
+                item?.image && <div className="flex justify-center items-center"><Avatar source={item?.image?.link} _w={item?.image?.w} _h={item?.image?.h}/></div>
               }
             </div>
             <div className="xl:w-6/12 w-full">
