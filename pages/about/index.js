@@ -79,14 +79,14 @@ const aboutData = [
 
 const About = () => {
   const [index, setIndex] = useState(0)
-  return <div className="z-10 xl:py-20 h-full">
+  return <div className="z-10 h-full py-12">
     <div className="container mx-auto h-full">
-      <div className="flex gap-x-4 xl:gap-x-8 xl:mx-0 justify-center z-10 ">
+      <div className="flex gap-x-4 xl:gap-x-8 xl:justify-center justify-between z-10 xl:mx-0 mx-[10px]">
         {
           aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${indexItem === index && "after:!bg-accent after:w-full after:transition-all after:duration-300 text-accent"} cursor-pointer relative capitalize after:absolute after:left-0 after:-bottom-[10px] after:h-[2px] after:w-8  after:bg-white`}>{item.title}</div>)
         }
       </div>
-      <div className=" my-[30px] xl:my-[50px] xl:mx-0 mx-[8px] z-10 h-[calc(100%-50px)]  overflow-y-auto">
+      <div className=" my-[50px] z-10 h-[calc(100%-50px)] xl:overflow-hidden overflow-y-auto">
         {
           aboutData[index].info.map((item, indexItem) => <div key={indexItem} className="flex flex-wrap gap-5">
             <div className="xl:w-5/12 w-full">
