@@ -91,7 +91,9 @@ const About = () => {
           aboutData[index].info.map((item, indexItem) => <div key={indexItem} className="flex flex-wrap gap-5">
             <div className="xl:w-5/12 w-full">
               {
-                item?.image && <div className="flex justify-center items-center"><Avatar source={item?.image?.link} _w={item?.image?.w} _h={item?.image?.h} /></div>
+                item?.image && <div className="flex justify-center items-center">
+                  <Avatar source={item?.image?.link} _w={item?.image?.w} _h={item?.image?.h} />
+                </div>
               }
             </div>
             <div className="xl:w-6/12 w-full">
