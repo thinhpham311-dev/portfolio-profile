@@ -38,7 +38,7 @@ const Nav = () => {
   const router = useRouter()
   return <nav className=" xl:w-[30%] z-10 lg:w-[40%] md:w-[50%] mx-auto w-[90%] drop-shadow-2xl h-[100px] flex items-center" >
     <motion.div variants={fadeIn('up', 1)} initial="hidden" animate="show" exit="hidden" className="w-full rounded-full backdrop-blur-ms bg-white/30 px-2">
-    <ul className="flex items-center justify-between h-full">
+    <ul className="flex justify-between h-full">
       {
         navData.map((item) => <li key={item.name} className={`text-white hover:text-accent py-2 transition-all duration-300 rounded-full `}><Link href={item.path} className={`p-[12px] drop-shadow-2xl rounded-full block ${router.pathname === item.path && "text-accent bg-white" }`}><span className="text-lg">{item.icon}</span></Link></li>)
       }
