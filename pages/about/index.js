@@ -81,7 +81,7 @@ const About = () => {
   const [index, setIndex] = useState(0)
   return <div className="z-10 h-full xl:py-12">
     <div className="container mx-auto h-full">
-      <div className="flex sticky top-0 items-center h-[50px] mb-[8px] gap-x-1 xl:gap-x-8 xl:justify-center justify-between z-10 xl:mx-0 mx-[10px] overflow-x-auto">
+      <div className="flex sticky top-0 items-center h-[50px] gap-x-1 xl:gap-x-8 xl:justify-center justify-between z-10 xl:mx-0 mx-[10px] overflow-x-auto">
         {
           aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${indexItem === index && "after:!bg-accent after:w-full after:transition-all after:duration-300 text-accent"} cursor-pointer relative capitalize after:absolute after:left-0 after:-bottom-[5px] after:h-[2px] after:w-8  after:bg-white whitespace-nowrap`}>{item.title}</div>)
         }
