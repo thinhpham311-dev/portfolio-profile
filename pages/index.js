@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 import { fadeIn } from "../variants"
 
 const Home = () => {
-  return <div className="z-10 h-full py-32">
+  return <div className="z-10 h-full">
       <ParticlesContainer/>
       <div className="text-center flex flex-col justify-center xl:pt-0 xl:text-left container mx-auto h-full">
         <motion.h1 variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden" className="h1 z-10">
