@@ -89,7 +89,7 @@ const About = () => {
       </div>
 
       <div className='flex flex-col w-full xl:max-w-[48%] h-[480px] overflow-y-auto'>
-        <div className=" sticky bg-site text-white  top-0 left-0 h-[50px] ">
+        <div className=" sticky bg-site text-white  top-0 left-0 h-[50px] mb-3">
          <div className='bg-gradient-to-r h-full from-primary/10 via-black/30 to-black/10 flex items-center xl:justify-start justify-center xl:gap-x-8 lg:gap-x-6 gap-x-4'>
           {aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${index === indexItem && "text-accent after:!bg-accent after:w-full after:transition-all after:duration-300"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}>{item.title}</div>)}
          </div>
