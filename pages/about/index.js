@@ -1,6 +1,5 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaBootstrap, FaPhp } from 'react-icons/fa'
 import { SiNextdotjs, SiFramer, SiAntdesign, SiSvelte, SiGatsby, SiMysql, SiPostgresql, SiTailwindcss } from 'react-icons/si'
-import Circles from '../../components/Circles';
 import { useState } from 'react'
 
 import { motion } from 'framer-motion'

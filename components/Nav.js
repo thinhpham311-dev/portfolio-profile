@@ -36,7 +36,7 @@ export const navData = [
 
 const Nav = () => {
   const router = useRouter()
-  return <nav className=" xl:w-[30%] z-10 lg:w-[40%] md:w-[50%] mx-auto w-[90%] drop-shadow-2xl h-[100px] flex items-center" >
+  return <nav className="sticky bottom-1 left-0 xl:w-[30%] z-10 lg:w-[40%] md:w-[50%] mx-auto w-[90%] drop-shadow-2xl h-[100px] flex items-center" >
     <motion.div variants={fadeIn('up', 1)} initial="hidden" animate="show" exit="hidden" className="w-full rounded-full backdrop-blur-ms bg-white/30 px-2">
     <ul className="flex justify-between h-full">
       {
