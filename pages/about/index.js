@@ -83,7 +83,6 @@ const About = () => {
   const [index, setIndex] = useState(0)
 
   return <div className="text-center xl:text-left xl:py-32 py-0 h-full">
-    <Circles />
     <div className="container mx-auto h-full flex flex-col xl:items-start items-center xl:flex-row xl:gap-x-8 gap-x-4">
       <div className="w-full xl:w-6/12 px-5 h-[270px]">
         <h1 className="h1 xl:text-left">I'm <br/> <span className="text-accent">Web Developer</span></h1>
