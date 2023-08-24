@@ -88,11 +88,11 @@ const About = () => {
         <p className="xl:text-left w-full xl:max-w-[84%]"> I'm a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience. </p>
       </div>
 
-      <div className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
+      <div className='flex flex-col w-full xl:max-w-[48%] h-[350px]'>
         <div className=" h-[50px] mb-3 flex items-center xl:justify-start justify-center xl:gap-x-8 lg:gap-x-6 gap-x-4">
           {aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${index === indexItem && "text-accent after:!bg-accent after:w-full after:transition-all after:duration-300"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}>{item.title}</div>)}
         </div>
-        <div className=' flex flex-col gap-y-2 xl:gap-y-4'>
+        <div className=' flex flex-col gap-y-2 xl:gap-y-4 h-[calc(100%-50px)] overflow-y-auto'>
           {aboutData[index].info.map((item, indexItem) => <div key={indexItem} className='mx-auto xl:mx-0 flex-1 flex-col md:flex-row max-w-max gap-x-2 text-white/60'>
             <h3 className="capitalize mb-2">{item.title}</h3>
             <div className='text-white'>{item.stage}</div>
