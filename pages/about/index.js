@@ -16,7 +16,7 @@ const aboutData = [
           <FaHtml5 />,
           <FaCss3 />,
           <FaJs />,
-          <FaPhp/>
+          <FaPhp />
         ],
       },
       {
@@ -26,18 +26,18 @@ const aboutData = [
           <SiNextdotjs />,
           <SiFramer />,
           <FaWordpress />,
-          <FaBootstrap/>,
-          <SiAntdesign/>,
-          <SiSvelte/>,
-          <SiGatsby/>,
-          <SiTailwindcss/>
+          <FaBootstrap />,
+          <SiAntdesign />,
+          <SiSvelte />,
+          <SiGatsby />,
+          <SiTailwindcss />
         ],
       },
       {
         title: 'Database',
         icons: [
-          <SiMysql/>,
-          <SiPostgresql/>
+          <SiMysql />,
+          <SiPostgresql />
         ],
       }
     ],
@@ -82,9 +82,9 @@ const About = () => {
   const [index, setIndex] = useState(0)
 
   return <div className="text-center xl:text-left xl:py-32 py-0 h-full">
-    <div className="container mx-auto h-full flex flex-col xl:items-start items-center xl:flex-row xl:gap-x-8 gap-x-4">
+    <div className="container mx-auto h-full flex flex-col xl:items-start items-center xl:flex-row xl:gap-x-12 gap-x-4">
       <div className="flex-1 flex flex-col justify-center">
-        <h1 className="h1 xl:text-left">I'm <br/> <span className="text-accent">Web Developer</span></h1>
+        <h1 className="h1 xl:text-left mb-3 xl:mb-5">I'm <br /> <span className="text-accent">Web Developer</span></h1>
         <p className="xl:text-left"> I'm a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience. </p>
       </div>
 
@@ -93,21 +93,19 @@ const About = () => {
           {aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${index === indexItem && "text-accent after:!bg-accent after:w-full after:transition-all after:duration-300"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}>{item.title}</div>)}
         </div>
         <div className=' flex flex-col gap-y-2 xl:gap-y-4'>
-          {aboutData[index].info.map((item, indexItem) => <div key={indexItem}>
-            <div className=' mx-auto xl:mx-0 flex-1 flex-col md:flex-row max-w-max gap-x-2 text-white/60'>
-              <h3 className="capitalize mb-2 font-bold">{item.title}</h3>
-              <div>{item.stage}</div>
-              <div className='flex flex-wrap xl:justify-start justify-center gap-x-4'>
-                {
-                  item.icons?.map((icon, indexIcon) => <div key={indexIcon} className='text-2xl transition-all p-2 xl:p-0'>{icon}</div>)
-                }
-              </div>
+          {aboutData[index].info.map((item, indexItem) => <div key={indexItem} className='mx-auto xl:mx-0 flex-1 flex-col md:flex-row max-w-max gap-x-2 text-white/60'>
+            <h3 className="capitalize mb-2 font-bold">{item.title}</h3>
+            <div>{item.stage}</div>
+            <div className='flex flex-wrap xl:justify-start justify-center gap-x-4'>
+              {
+                item.icons?.map((icon, indexIcon) => <div key={indexIcon} className='text-2xl transition-all p-2 xl:p-0'>{icon}</div>)
+              }
             </div>
           </div>)}
-          </div>
         </div>
       </div>
-    </div>;
+    </div>
+  </div>;
 };
 
 export default About;
