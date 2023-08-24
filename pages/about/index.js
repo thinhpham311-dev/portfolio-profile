@@ -88,8 +88,8 @@ const About = () => {
         <p className="xl:text-left"> I'm a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience. </p>
       </div>
 
-      <div className='w-full xl:w-6/12 px-5 xl:px-0 xl:h-full h-[calc(100%-280px)]'>
-        <div className=" h-[50px] mb-3 flex items-center xl:justify-start justify-center xl:gap-x-8 md:gap-x-4 lg:gap-x-6 gap-x-2">
+      <div className='w-full xl:w-6/12 px-5 xl:px-0 xl:h-full h-[calc(100%-270px)]'>
+        <div className=" h-[50px] mb-3 flex items-center xl:justify-start justify-center xl:gap-x-8 lg:gap-x-6 gap-x-4">
           {aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${index === indexItem && "text-accent after:!bg-accent after:w-full after:transition-all after:duration-300"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}>{item.title}</div>)}
         </div>
         <div className='h-[calc(100%-70px)] overflow-y-auto overflow-x-hidden'>
@@ -99,7 +99,7 @@ const About = () => {
               <div>{item.stage}</div>
               <div className='flex flex-wrap xl:justify-start justify-center gap-x-4'>
                 {
-                  item.icons?.map((icon, indexIcon) => <div key={indexIcon} className='text-2xl transition-all'>{icon}</div>)
+                  item.icons?.map((icon, indexIcon) => <div key={indexIcon} className='text-2xl transition-all p-2 xl:p-0'>{icon}</div>)
                 }
               </div>
             </div>
