@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Socials = () => {
   return  <div className="social-list xl:mx-0 mx-auto xl:w-[25%] z-10 lg:w-[40%] md:w-[50%] w-[90%]">
-  <ul className="flex justify-between">
+  <ul className="flex justify-evenly">
     <li className="hover:text-accent transition-all duration-300"><Link href="" className=" xl:text-[25px] text-[20px] p-3 block"><FaFacebookF/></Link></li>
     <li className="hover:text-accent transition-all duration-300"><Link href="" className=" xl:text-[25px] text-[20px] p-3 block"><FaTelegram/></Link></li>
     <li className="hover:text-accent transition-all duration-300"><Link href="" className=" xl:text-[25px] text-[20px] p-3 block"><FaLinkedinIn/></Link></li>

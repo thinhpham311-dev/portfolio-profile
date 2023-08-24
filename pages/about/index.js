@@ -1,44 +1,46 @@
+import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaBootstrap, FaPhp } from 'react-icons/fa'
+import { SiNextdotjs, SiFramer, SiAntdesign, SiSvelte, SiGatsby, SiMysql, SiPostgresql, SiTailwindcss } from 'react-icons/si'
+import Circles from '../../components/Circles';
 import { useState } from 'react'
-import Avatar from '../../components/Avatar';
-import { FaFigma, FaHtml5, FaCss3, FaJs, FaReact } from 'react-icons/fa'
-import { SiAdobexd, SiAdobephotoshop, SiNextdotjs, SiFramer, FaWordpress } from 'react-icons/si'
-import parse from 'html-react-parser';
+
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../variants';
 
 //  data
 const aboutData = [
   {
-    title: 'about me',
-    info: [
-      {
-        introduce: `I'm <br/><span class="text-accent">Web Developer</span>`,
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
-        image: {
-          w: 400,
-          h: 550,
-          link: '/avatar.png'
-        }
-      },
-    ],
-  },
-  {
     title: 'skills',
     info: [
       {
-        title: 'Web Development',
+        title: 'Programing Language',
         icons: [
           <FaHtml5 />,
           <FaCss3 />,
           <FaJs />,
+          <FaPhp/>
+        ],
+      },
+      {
+        title: 'Framework',
+        icons: [
           <FaReact />,
           <SiNextdotjs />,
           <SiFramer />,
           <FaWordpress />,
+          <FaBootstrap/>,
+          <SiAntdesign/>,
+          <SiSvelte/>,
+          <SiGatsby/>,
+          <SiTailwindcss/>
         ],
       },
       {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
+        title: 'Database',
+        icons: [
+          <SiMysql/>,
+          <SiPostgresql/>
+        ],
+      }
     ],
   },
   {
@@ -79,33 +81,35 @@ const aboutData = [
 
 const About = () => {
   const [index, setIndex] = useState(0)
-  return <div className="z-10 h-full xl:py-12">
-    <div className="container mx-auto h-full">
-      <div className="flex sticky top-0 items-center h-[50px] gap-x-1 xl:gap-x-8 xl:justify-center justify-between z-10 xl:mx-0 mx-[10px] overflow-x-auto">
-        {
-          aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${indexItem === index && "after:!bg-accent after:w-full after:transition-all after:duration-300 text-accent"} cursor-pointer relative capitalize after:absolute after:left-0 after:-bottom-[5px] after:h-[2px] after:w-8  after:bg-white whitespace-nowrap`}>{item.title}</div>)
-        }
+
+  return <div className="text-center xl:text-left xl:py-32 py-0 h-full">
+    <Circles />
+    <div className="container mx-auto h-full flex flex-col xl:items-start items-center xl:flex-row xl:gap-x-8 gap-x-4">
+      <div className="w-full xl:w-6/12 px-5 h-[270px]">
+        <h1 className="h1 xl:text-left">I'm <br/> <span className="text-accent">Web Developer</span></h1>
+        <p className="xl:text-left"> I'm a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience. </p>
       </div>
-      <div className=" xl:my-[50px] z-10 h-[calc(100%-50px)] xl:overflow-hidden overflow-y-auto mx-[10px] xl:m-0">
-        {
-          aboutData[index].info.map((item, indexItem) => <div key={indexItem} className="flex flex-wrap gap-5">
-            <div className="xl:w-5/12 w-full">
-              {
-                item?.image && <div className="flex justify-center items-center">
-                  <Avatar source={item?.image?.link} _w={item?.image?.w} _h={item?.image?.h} />
-                </div>
-              }
+
+      <div className='w-full xl:w-6/12 px-5 xl:px-0 xl:h-full h-[calc(100%-280px)]'>
+        <div className=" h-[50px] mb-3 flex items-center xl:justify-start justify-center xl:gap-x-8 md:gap-x-4 lg:gap-x-6 gap-x-2">
+          {aboutData.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${index === indexItem && "text-accent after:!bg-accent after:w-full after:transition-all after:duration-300"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}>{item.title}</div>)}
+        </div>
+        <div className='h-[calc(100%-70px)] overflow-y-auto overflow-x-hidden'>
+          {aboutData[index].info.map((item, indexItem) => <div key={indexItem}>
+            <div className=' mx-auto xl:mx-0 flex-1 flex-col md:flex-row max-w-max gap-x-2 xl:px-0 xl:py-3 p-5'>
+              <h3 className="capitalize mb-2 xl:text-xl font-bold">{item.title}</h3>
+              <div>{item.stage}</div>
+              <div className='flex flex-wrap xl:justify-start justify-center gap-x-4'>
+                {
+                  item.icons?.map((icon, indexIcon) => <div key={indexIcon} className='text-2xl transition-all'>{icon}</div>)
+                }
+              </div>
             </div>
-            <div className="xl:w-6/12 w-full">
-              {item?.introduce && <h1 className="h1">{parse(item?.introduce)}</h1>}
-              {item?.content && <p>{item?.content}</p>}
-              {item?.title && <p>{item?.title}</p>}
-            </div>
-          </div>)
-        }
+          </div>)}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </div>;
 };
 
 export default About;
