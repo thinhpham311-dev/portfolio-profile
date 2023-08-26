@@ -20,7 +20,8 @@ import { fadeIn } from "../variants"
 export const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'projects', path: '/projects', icon: <HiRectangleGroup /> },
+  { name: 'service', path: '/service', icon: <HiRectangleGroup /> },
+  { name: 'project', path: '/project', icon: <HiViewColumns /> },
   {
     name: 'contact',
     path: '/contact',
@@ -30,7 +31,7 @@ export const navData = [
 
 const Nav = () => {
   const router = useRouter()
-  return <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 xl:w-[20%] z-10 lg:w-[40%] md:w-[50%] mx-auto w-[70%] drop-shadow-2xl h-[100px] flex items-center" >
+  return <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 xl:w-[25%] z-10 lg:w-[40%] md:w-[50%] w-[90%] mx-auto drop-shadow-2xl h-[100px] flex items-center" >
     <motion.div variants={fadeIn('up', 1)} initial="hidden" animate="show" exit="hidden" className="w-full rounded-full backdrop-blur-ms bg-white/30 px-2">
     <ul className="flex justify-between h-full">
       {
