@@ -1,6 +1,7 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaBootstrap, FaPhp } from 'react-icons/fa'
 import { SiNextdotjs, SiFramer, SiAntdesign, SiSvelte, SiGatsby, SiMysql, SiPostgresql, SiTailwindcss } from 'react-icons/si'
 import { useState } from 'react'
+import Circles from './../../components/Circles';
 
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants';
@@ -58,30 +59,22 @@ const aboutData = [
         stage: '2022/11 - 2023/08',
       },
     ],
-  },
-  {
-    title: 'credentials',
-    info: [
+  },{
+    title: 'certificate',
+    info:[
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
-      },
-      {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
-      },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
-      },
-    ],
-  },
+        title: 'B English certificate',
+        stage: '2019'
+      }
+    ]
+  }
 ];
 
 const About = () => {
   const [index, setIndex] = useState(0)
 
-  return <div className="text-center xl:text-left xl:pt-32 py-0 h-full">
+  return <div className="text-center xl:text-left xl:pt-32 py-0 h-full relative">
+        <Circles/>
     <div className="container mx-auto px-5 h-full flex flex-col xl:items-start items-center xl:flex-row xl:gap-x-10 gap-x-4">
       <div className="flex flex-col justify-center h-[200px]">
         <h1 className="h1 xl:text-left">I'm <br /> <span className="text-accent">Web Developer</span></h1>
@@ -94,7 +87,6 @@ const About = () => {
         </div>
         <div className='h-[calc(100%-60px)] overflow-y-auto'>
           <div className=' flex flex-col gap-y-2 xl:gap-y-4'>
-
             {aboutData[index].info.map((item, indexItem) => <div key={indexItem} className='mx-auto xl:mx-0 flex-1 flex-col md:flex-row max-w-max gap-x-2 text-white/60'>
               <h3 className="capitalize mb-2">{item.title}</h3>
               <div className='text-white'>{item.stage}</div>

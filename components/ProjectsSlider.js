@@ -1,5 +1,5 @@
 // data
-const serviceData = [
+const projectData = [
   {
     icon: <RxCrop />,
     title: 'Branding',
@@ -27,8 +27,8 @@ const serviceData = [
   },
 ];
 
-const ServiceSlider = () => {
+const ProjectsSlider = () => {
   return <div>Service Slider</div>;
 };
 
-export default ServiceSlider;
+export default ProjectsSlider;
