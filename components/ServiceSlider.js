@@ -2,12 +2,12 @@ import { RxCrop, RxPencil2, RxDesktop, RxReader, RxRocket } from "react-icons/rx
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination, Scrollbar } from "swiper/modules"
+import { FreeMode, Pagination } from "swiper/modules"
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+
 
 // data
 const ServiceData = [
@@ -51,8 +51,7 @@ const ServiceSlider = () => {
       }}
       freeMode={true}
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      modules={[FreeMode, Pagination, Scrollbar]}
+      modules={[FreeMode, Pagination]}
       className="h-[200px] sm:h-[260px]"
     >
       {
