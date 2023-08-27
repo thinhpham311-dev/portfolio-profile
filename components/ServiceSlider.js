@@ -2,7 +2,7 @@ import { RxCrop, RxPencil2, RxDesktop, RxReader, RxRocket } from "react-icons/rx
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination } from "swiper/modules"
+import {Pagination } from "swiper/modules"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,7 +25,7 @@ const ServiceData = [
     icon: <RxRocket />,
     title: 'SEO',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
+  }
 ];
 
 const ServiceSlider = () => {
@@ -51,7 +51,7 @@ const ServiceSlider = () => {
       }}
       freeMode={true}
       pagination={{ clickable: true }}
-      modules={[FreeMode, Pagination]}
+      modules={[Pagination]}
       className="h-[200px] sm:h-[260px]"
     >
       {
