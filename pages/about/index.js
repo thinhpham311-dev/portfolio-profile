@@ -47,25 +47,33 @@ const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'Front End Developer - PAP Technology company',
-        stage: '2020/06 - 2022/02',
+        title: 'UX/UI Designer - XYZ Company',
+        stage: '2012 - 2023',
       },
       {
-        title: 'Web Developer - Antking Singapore Company',
-        stage: '2022/03 - 2022/08',
+        title: 'Web Developer - ABC Agency',
+        stage: '2010 - 2012',
       },
       {
-        title: 'Front End Developer - TechVSI company',
-        stage: '2022/11 - 2023/08',
+        title: 'Intern - DEF Corporation',
+        stage: '2008 - 2010',
       },
     ],
   },{
     title: 'certificate',
     info:[
       {
-        title: 'B English certificate',
-        stage: '2019'
-      }
+        title: 'Web Development - ABC University, LA, CA',
+        stage: '2011',
+      },
+      {
+        title: 'Computer Science Diploma - AV Technical Institute',
+        stage: '2009',
+      },
+      {
+        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
+        stage: '2006',
+      },
     ]
   }
 ];
