@@ -1,7 +1,8 @@
+import { useState } from 'react'
 import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaBootstrap, FaPhp } from 'react-icons/fa'
 import { SiNextdotjs, SiFramer, SiAntdesign, SiSvelte, SiGatsby, SiMysql, SiPostgresql, SiTailwindcss } from 'react-icons/si'
-import { useState } from 'react'
 import Circles from './../../components/Circles';
+import {Button} from '../../components/Button'
 
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants';
@@ -92,6 +93,9 @@ const About = () => {
       <div className="flex flex-col justify-center h-[230px] xl:mt-5">
         <motion.h1 className="h1 xl:text-left" variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden">I'm <br /> <span className="text-accent">Web Developer</span></motion.h1>
         <motion.p className="xl:text-left w-full xl:max-w-[84%]" variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden"> I'm a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience. </motion.p>
+        <motion.div className="py-4">
+            <Button>Download CV</Button>
+        </motion.div>
       </div>
 
       <div className='flex flex-col w-full xl:max-w-[48%] h-[calc(100%-230px)] xl:h-full'>
