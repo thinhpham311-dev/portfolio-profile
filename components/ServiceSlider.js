@@ -51,7 +51,7 @@ const ServiceSlider = () => {
       }}
       pagination={{ clickable: true }}
       modules={[Pagination]}
-      className="h-[230px] sm:h-[320px]"
+      className="h-[250px] sm:h-[320px]"
     >
       {
         ServiceData.map((item, index) => <SwiperSlide key={index}>
