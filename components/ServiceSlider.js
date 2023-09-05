@@ -1,4 +1,4 @@
-import { RxDesktop, RxReader, RxRocket, RxArrowTopRight } from "react-icons/rx"
+import { RxArrowTopRight } from "react-icons/rx"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,27 +8,11 @@ import {Pagination } from "swiper/modules"
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-
-// data
-const ServiceData = [
-  {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  }
-];
+//data
+import {SERVICELIST_DATA} from "../constants"
 
 const ServiceSlider = () => {
+  const data = SERVICELIST_DATA
   return <>
     <Swiper
       breakpoints={{
@@ -54,7 +38,7 @@ const ServiceSlider = () => {
       className="h-[250px] sm:h-[320px]"
     >
       {
-        ServiceData.map((item, index) => <SwiperSlide key={index}>
+        data.map((item, index) => <SwiperSlide key={index}>
           <div className="bg-[rgba(65,47,123,0.15)] hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 p-5 rounded-lg group xl:block flex gap-x-5">
             <div className=" text-3xl  text-accent rounded-lg mb-5">{item.icon}</div>
             <div className="xl:w-full w-[calc(100%-74px)] mb-5">

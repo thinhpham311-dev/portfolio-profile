@@ -1,7 +1,11 @@
 import React from 'react';
+import {VscLoading} from "react-icons/vsc"
 
-export const Button = ({type, children}) => {
+export const Button = (props) => {
     return (
-        <button type={type} className="bg-white text-accent px-3 py-2 flex  items-center hover:text-white hover:bg-accent transition-all duration-300">{children}</button>
+        <button disabled={props.isDisabled} type={props.type} className={`${props.styles} flex justify-center items-center transition-all duration-300`}>
+          {props.isLoading && <VscLoading className="animate-spin mr-3"/>}
+        {props.children}
+        </button>
     );
 }

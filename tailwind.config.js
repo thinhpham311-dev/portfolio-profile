@@ -25,6 +25,9 @@ module.exports = {
         primary: '#131424',
         secondary: '#393A47',
         accent: '#F13024',
+        success: 'rgb(34 197 94)',
+        warning: 'rgb(245 158 11)',
+        error: 'rgb(244 63 94)'
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
