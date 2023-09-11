@@ -9,8 +9,8 @@ function MyApp({ Component, pageProps }) {
   return <Layout>
     <AnimatePresence mode="wait">
       <motion.div key={router.route} className="h-[calc(100vh-200px)]">
-        <Transition/>
-      <Component {...pageProps} />
+        <Transition />
+          <Component {...pageProps} />
       </motion.div>
     </AnimatePresence>
   </Layout>

@@ -24,8 +24,8 @@ const About = () => {
         <Circles/>
     <div className="container h-full mx-auto px-5 flex flex-col xl:items-start items-center xl:flex-row xl:gap-x-10 gap-x-4">
       <div className="flex flex-col justify-center h-[300px] xl:mt-10">
-        <motion.h1 className="h1 xl:text-left" variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden">I'm <br /> <span className="text-accent">Web Developer</span></motion.h1>
-        <motion.p className="xl:text-left w-full xl:max-w-[84%] xl:mb-8 mb-5" variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden"> I'm a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience. </motion.p>
+        <motion.h1 className="h1 xl:text-left" variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden">About <span className="text-accent">me</span></motion.h1>
+        <motion.p className="xl:text-left w-full xl:max-w-[84%] xl:mb-8 mb-5" variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden"> I am a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience.  It's also an opportunity to enhance my knowledge by engaging in new challenges. </motion.p>
         <motion.form method="get" action="/phamtrithinh_0702895474_front-end-developer.pdf" className="xl:justify-start gap-x-5 justify-center flex" variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden">
           <Button type="submit" styles=" xl:py-2 xl:px-3 py-1 px-2 bg-transparent border-accent border-2 hover:bg-accent rounded-lg"><BsDownload className="mr-3"/>Download CV</Button>
           <Link href="">

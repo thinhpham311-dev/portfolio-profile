@@ -13,7 +13,7 @@ import { RxDesktop, RxReader, RxRocket } from "react-icons/rx"
 export const NAVBAR_DATA = [
     { name: 'home', path: '/', icon: <HiHome /> },
     { name: 'about', path: '/about', icon: <HiUser /> },
-    { name: 'service', path: '/service', icon: <HiRectangleGroup /> },
+    // { name: 'service', path: '/service', icon: <HiRectangleGroup /> },
     { name: 'project', path: '/project', icon: <HiViewColumns /> },
     {
       name: 'contact',
@@ -67,33 +67,50 @@ export const RESUMELIST_DATA = [
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Front end Web Developer - PAP Technology company',
+        stage: '2020/06 - 2022/02',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
+        title: 'Front end Web Developer - Antking Singapore Company',
+        stage: '2022/03 - 2022/08',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Front end Web Developer - TechVSI company',
+        stage: '2022/11 - 2023/08',
       },
-    ],
+    ]
   },{
     title: 'certificate',
     info:[
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'Front end Web Developer - PAP Technology company',
+        stage: '2020/06 - 2022/02',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'Front end Web Developer - Antking Singapore Company',
+        stage: '2022/03 - 2022/08',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'Front end Web Developer - TechVSI company',
+        stage: '2022/11 - 2023/08',
       },
+    ]
+  },
+  {
+    title: 'Soft Skill',
+    info:[
+      {
+        title: 'Able to work alone and in groups',
+      },
+      {
+        title: 'Analysis and problem solving',
+      },
+      {
+        title: 'Sociable and friendly',
+      },
+      {
+        title: 'Honest and enthusiasm in work'
+      }
     ]
   }
 ];
@@ -123,18 +140,22 @@ export const PROJECTLIST_DATA = {
         {
           title: 'title',
           path: '/thumb1.jpg',
+          src: 'https://tnbaura.vc'
         },
         {
           title: 'title',
           path: '/thumb2.jpg',
+          src: 'https://rsvp.notsolittlefair.com'
         },
         {
           title: 'title',
           path: '/thumb3.jpg',
+          src: "https://conversations.ntuc.sg"
         },
         {
           title: 'title',
           path: '/thumb4.jpg',
+          src: "https://www.igx360.com/vi-VN"
         },
       ],
     },
@@ -143,19 +164,37 @@ export const PROJECTLIST_DATA = {
         {
           title: 'title',
           path: '/thumb4.jpg',
+          src: "https://bado.vn"
         },
         {
           title: 'title',
           path: '/thumb1.jpg',
+          src: "https://maxwellreserve.com"
         },
         {
           title: 'title',
           path: '/thumb2.jpg',
+          src: "https://officersmesspolobar.sg"
         },
         {
           title: 'title',
           path: '/thumb3.jpg',
+          src: "https://shikar.sg"
         },
+      ],
+    },
+    {
+      images: [
+        {
+          title: 'title',
+          path: '/thumb4.jpg',
+          src: "https://pttmovies.vercel.app"
+        },
+        {
+          title: 'title',
+          path: '/thumb1.jpg',
+          src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app"
+        }
       ],
     },
   ],

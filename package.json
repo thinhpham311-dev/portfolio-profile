@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^13.4.4",
-    "@react-three/drei": "^9.82.0",
+    "@react-three/drei": "^9.83.3",
     "@react-three/fiber": "^8.14.1",
     "@types/three": "^0.155.1",
     "framer-motion": "^10.12.16",

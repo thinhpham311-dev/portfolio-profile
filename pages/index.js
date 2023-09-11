@@ -2,7 +2,7 @@
 import ProjectBtn from "../components/ProjectsBtn"
 import Avatar from "../components/Avatar"
 import ParticlesContainer from "../components/ParticlesContainer"
-
+import Circles from "../components/Circles"
 //framer motion
 import { motion } from "framer-motion"
 
@@ -14,22 +14,22 @@ const Home = () => {
       <ParticlesContainer/>
       <div className="text-center flex flex-col justify-center xl:pt-0 xl:text-left container mx-auto h-full">
         <motion.h1 variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden" className="h1 z-10">
-          Transforming Ideas <br /> Info {' '} <span className="text-accent">Digital reality</span>
+          Hello <br /> I'm {' '} <span className="text-accent">Thinh Pham</span>
         </motion.h1>
-        <motion.p variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden" className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12 text-yellow z-10">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        <motion.p variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden" className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12 text-yellow z-10">
+        I am a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience.
         </motion.p>
-        <motion.div variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden" className="z-20 mx-auto xl:mx-0">
+        <motion.div variants={fadeIn('down', 0.5)} initial="hidden" animate="show" exit="hidden" className="z-20 mx-auto xl:mx-0">
           <ProjectBtn />
         </motion.div>
-      </div>
 
-    <div className="w-[1200px] h-full absolute right-0 bottom-0">
-      <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
-      <motion.div variants={fadeIn('up', 0.5)} initial="hidden" animate="show" exit="hidden" transition={{duration:1, ease:'easeInOut'}} className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]">
-        <Avatar _w={737} _h={678} source="/avatar-3d-thinhpham.png"/>
+      <motion.div variants={fadeIn('up', 0.6)} initial="hidden" animate="show" exit="hidden" transition={{duration:1, ease:'easeInOut'}} className="w-full h-full right-0 top-0  xl:block hidden  max-w-[737px] max-h-[678px] absolute ">
+        <div className="absolute h-[450px] w-[450px] shadow-lg overflow-hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full mt-[20px] bg-transparent">
+         <Avatar _w={737} _h={678} source="/avatar-bg-thinhpham.jpg"/>
+        </div>
       </motion.div>
-    </div>
+      </div>
+    <Circles/>
   </div>;
 };
 
