@@ -19,7 +19,6 @@ const Nav = () => {
       {
         data.map((item) => <li key={item.name} className={`text-white hover:text-accent py-2 transition-all duration-300 rounded-full `}><Link href={item.path} className={`p-[12px] drop-shadow-2xl rounded-full block ${router.pathname === item.path && "text-accent bg-white" }`}><span className="text-lg">{item.icon}</span></Link></li>)
       }
-
     </ul>
     </motion.div>
       </nav>;
