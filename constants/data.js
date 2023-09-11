@@ -83,17 +83,13 @@ export const RESUMELIST_DATA = [
     title: 'certificate',
     info:[
       {
-        title: 'Front end Web Developer - PAP Technology company',
+        title: 'SoftWare Engineering Certificate',
         stage: '2020/06 - 2022/02',
       },
       {
-        title: 'Front end Web Developer - Antking Singapore Company',
+        title: 'B English Certificate',
         stage: '2022/03 - 2022/08',
-      },
-      {
-        title: 'Front end Web Developer - TechVSI company',
-        stage: '2022/11 - 2023/08',
-      },
+      }
     ]
   },
   {
@@ -139,7 +135,7 @@ export const PROJECTLIST_DATA = {
       images: [
         {
           title: 'title',
-          path: '/thumb1.jpg',
+          path: '/project-1.png',
           src: 'https://tnbaura.vc'
         },
         {
