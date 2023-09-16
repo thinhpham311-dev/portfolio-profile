@@ -84,11 +84,11 @@ export const RESUMELIST_DATA = [
     info:[
       {
         title: 'SoftWare Engineering Certificate',
-        stage: '2020/06 - 2022/02',
+        stage: '2017/05 - 2020/09',
       },
       {
         title: 'B English Certificate',
-        stage: '2022/03 - 2022/08',
+        stage: '2019/03',
       }
     ]
   },
@@ -135,22 +135,22 @@ export const PROJECTLIST_DATA = {
       images: [
         {
           title: 'title',
-          path: '/project-1.png',
+          path: '/project-01.png',
           src: 'https://tnbaura.vc'
         },
         {
           title: 'title',
-          path: '/thumb2.jpg',
+          path: '/project-2.png',
           src: 'https://rsvp.notsolittlefair.com'
         },
         {
           title: 'title',
-          path: '/thumb3.jpg',
+          path: '/project-3.png',
           src: "https://conversations.ntuc.sg"
         },
         {
           title: 'title',
-          path: '/thumb4.jpg',
+          path: '/project-4.png',
           src: "https://www.igx360.com/vi-VN"
         },
       ],
@@ -159,22 +159,22 @@ export const PROJECTLIST_DATA = {
       images: [
         {
           title: 'title',
-          path: '/thumb4.jpg',
+          path: '/project-5.png',
           src: "https://bado.vn"
         },
         {
           title: 'title',
-          path: '/thumb1.jpg',
+          path: '/project-6.png',
           src: "https://maxwellreserve.com"
         },
         {
           title: 'title',
-          path: '/thumb2.jpg',
+          path: '/project-7.png',
           src: "https://officersmesspolobar.sg"
         },
         {
           title: 'title',
-          path: '/thumb3.jpg',
+          path: '/project-8.png',
           src: "https://shikar.sg"
         },
       ],
@@ -183,12 +183,12 @@ export const PROJECTLIST_DATA = {
       images: [
         {
           title: 'title',
-          path: '/thumb4.jpg',
+          path: '/project-9.png',
           src: "https://pttmovies.vercel.app"
         },
         {
           title: 'title',
-          path: '/thumb1.jpg',
+          path: '/project-10.png',
           src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app"
         }
       ],

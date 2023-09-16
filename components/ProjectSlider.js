@@ -3,7 +3,7 @@ import Link from 'next/link'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Pagination } from "swiper/modules"
-import {BsArrowRightCircle} from "react-icons/bs"
+import {FiExternalLink} from "react-icons/fi"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,9 +25,9 @@ const ProjectSlider = () => {
             <div className=" grid gap-3 grid-cols-2 grid-rows-2 cursor-pointer shadow-indigo-500/40">
             {item.images.map((image, index) => <div key={index} className="after:h-0 overflow-hidden rounded-lg flex justify-center items-center group bg-white">
                <div className="flex justify-center items-center relative overflow-hidden h-full">
-                <Image src={image.path} width={500} height={300} alt={image.title}/>
+                <Image src={image.path} width={500} height={300} alt={image.title} className=" h-full"/>
                 <Link href={image.src} target="_blank" className="absolute inset-0 h-full w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-80 transition-all duration-300 flex items-center justify-center">
-                   <span className="mr-2"> Read More </span> <BsArrowRightCircle/>
+                   <span className="mr-2"> Visit page </span> <FiExternalLink/>
                 </Link>
                </div>
             
