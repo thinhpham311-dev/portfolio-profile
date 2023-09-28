@@ -8,9 +8,9 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return <Layout>
     <AnimatePresence mode="wait">
-      <motion.div key={router.route} className="h-[calc(100%-250px)] xl:h-[calc(100%-200px)]">
+      <motion.div key={router.route} className="h-[calc(100%-200px)]">
         <Transition />
-          <Component {...pageProps} />
+        <Component {...pageProps} />
       </motion.div>
     </AnimatePresence>
   </Layout>
