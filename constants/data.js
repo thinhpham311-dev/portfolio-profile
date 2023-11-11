@@ -11,15 +11,15 @@ import { RxDesktop, RxReader, RxRocket } from "react-icons/rx"
 
 // nav data
 export const NAVBAR_DATA = [
-    { name: 'home', path: '/', icon: <HiHome /> },
-    { name: 'about', path: '/about', icon: <HiUser /> },
-    // { name: 'service', path: '/service', icon: <HiRectangleGroup /> },
-    { name: 'project', path: '/project', icon: <HiViewColumns /> },
-    {
-      name: 'contact',
-      path: '/contact',
-      icon: <HiEnvelope />,
-    },
+  { name: 'home', path: '/', icon: <HiHome /> },
+  { name: 'about', path: '/about', icon: <HiUser /> },
+  // { name: 'service', path: '/service', icon: <HiRectangleGroup /> },
+  { name: 'project', path: '/project', icon: <HiViewColumns /> },
+  {
+    name: 'contact',
+    path: '/contact',
+    icon: <HiEnvelope />,
+  },
 ];
 
 export const RESUMELIST_DATA = [
@@ -79,9 +79,9 @@ export const RESUMELIST_DATA = [
         stage: '2022/11 - 2023/08',
       },
     ]
-  },{
+  }, {
     title: 'certificate',
-    info:[
+    info: [
       {
         title: 'SoftWare Engineering Certificate',
         stage: '2017/05 - 2020/09',
@@ -94,7 +94,7 @@ export const RESUMELIST_DATA = [
   },
   {
     title: 'Soft Skill',
-    info:[
+    info: [
       {
         title: 'Able to work alone and in groups',
       },
@@ -190,6 +190,11 @@ export const PROJECTLIST_DATA = {
           title: 'title',
           path: '/project-10.png',
           src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app"
+        },
+        {
+          title: 'title',
+          path: '/project-12.png',
+          src: "https://portfolio-animation-zeta.vercel.app/"
         }
       ],
     },
