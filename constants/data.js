@@ -195,6 +195,11 @@ export const PROJECTLIST_DATA = {
           title: 'title',
           path: '/project-12.png',
           src: "https://portfolio-animation-zeta.vercel.app/"
+        },
+        {
+          title: 'title',
+          path: '/project-13.png',
+          src: "https://catalog-business.vercel.app/"
         }
       ],
     },
