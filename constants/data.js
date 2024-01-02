@@ -72,11 +72,11 @@ export const RESUMELIST_DATA = [
       },
       {
         title: 'Front end Web Developer - Antking Singapore Company',
-        stage: '2022/03 - 2022/08',
+        stage: '2022/03 - 2022/12',
       },
       {
         title: 'Front end Web Developer - TechVSI company',
-        stage: '2022/11 - 2023/08',
+        stage: '2022/11 - 2023/11',
       },
     ]
   }, {
@@ -153,10 +153,6 @@ export const PROJECTLIST_DATA = {
           path: '/project-4.png',
           src: "https://www.igx360.com/vi-VN"
         },
-      ],
-    },
-    {
-      images: [
         {
           title: 'title',
           path: '/project-5.png',
@@ -167,6 +163,11 @@ export const PROJECTLIST_DATA = {
           path: '/project-6.png',
           src: "https://maxwellreserve.com"
         },
+      ],
+    },
+    {
+      images: [
+
         {
           title: 'title',
           path: '/project-7.png',
@@ -177,10 +178,6 @@ export const PROJECTLIST_DATA = {
           path: '/project-8.png',
           src: "https://shikar.sg"
         },
-      ],
-    },
-    {
-      images: [
         {
           title: 'title',
           path: '/project-9.png',
