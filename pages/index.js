@@ -13,14 +13,14 @@ const Home = () => {
   return <div className="z-10 h-full xl:mb-0 py-[30px] relative">
     <ParticlesContainer />
     <div className="text-center flex gap-x-[10%] px-[2vw] justify-between xl:pt-0 xl:text-left container mx-auto h-full">
-      <div className="flex-1 w-full max-w-[45%]">
+      <div className="flex flex-col justify-center flex-1 w-full xl:w-[45%]">
         <motion.h1 variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden" className="h1 z-10">
           Hello <br /> I'm {' '} <span className="text-accent">Thinh Pham</span>
         </motion.h1>
         <motion.p variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden" className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12 text-yellow z-10">
           I'm a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience.
         </motion.p>
-        <motion.div variants={fadeIn('down', 0.5)} initial="hidden" animate="show" exit="hidden" className="z-20 mx-auto xl:mx-2">
+        <motion.div variants={fadeIn('down', 0.5)} initial="hidden" animate="show" exit="hidden" className="z-20">
           <ProjectBtn />
         </motion.div>
       </div>

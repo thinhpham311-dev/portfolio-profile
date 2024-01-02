@@ -18,11 +18,10 @@ const ProjectSlider = () => {
     <Swiper
       pagination={{ clickable: true }}
       modules={[Pagination]}
-      className="h-[260px] sm:h-[480px]"
     >
       {
         data.slides.map((item, index) => <SwiperSlide key={index}>
-          <div className=" grid gap-3 grid-cols-3 grid-rows-2 cursor-pointer shadow-indigo-500/40">
+          <div className=" grid gap-3 xl:grid-cols-3 xl:grid-rows-2 grid-cols-2 grid-rows-3 cursor-pointer shadow-indigo-500/40">
             {item.images.map((image, index) => <div key={index} className="after:h-0 overflow-hidden rounded-lg flex justify-center items-center group bg-white">
               <div className="flex justify-center items-center relative overflow-hidden h-full">
                 <Image src={image.path} width={500} height={300} alt={image.title} className=" h-full" />
