@@ -20,7 +20,7 @@ const Home = () => {
         <motion.p variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden" className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12 text-yellow z-10">
           I'm a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience.
         </motion.p>
-        <motion.div variants={fadeIn('down', 0.5)} initial="hidden" animate="show" exit="hidden" className="z-20 mx-auto xl:mx-0">
+        <motion.div variants={fadeIn('down', 0.5)} initial="hidden" animate="show" exit="hidden" className="z-20 mx-auto xl:mx-2">
           <ProjectBtn />
         </motion.div>
       </div>
