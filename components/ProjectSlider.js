@@ -2,12 +2,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper/modules"
+import { Pagination, Navigation } from "swiper/modules"
+
 import { FiExternalLink } from "react-icons/fi"
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // data
 import { PROJECTLIST_DATA } from "../constants"
@@ -17,7 +19,8 @@ const ProjectSlider = () => {
   return <>
     <Swiper
       pagination={{ clickable: true }}
-      modules={[Pagination]}
+      navigation={true}
+      modules={[Pagination, Navigation]}
     >
       {
         data.slides.map((item, index) => <SwiperSlide key={index}>
