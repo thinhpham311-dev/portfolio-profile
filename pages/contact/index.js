@@ -49,8 +49,8 @@ const Contact = () => {
 
   const { loading, error, status } = setting
 
-  return <div className="h-[calc(100dvh-200px)] w-full flex items-center justify-center relative">
-    <div className="xl:w-[30%] w-[90%] rounded-lg bg-[rgba(65,47,123,0.15)] h-full px-10 py-5 flex flex-col justify-center">
+  return <div className=" w-full h-full flex items-center justify-center relative">
+    <div className="xl:w-[30%] w-[90%] rounded-lg bg-[rgba(65,47,123,0.15)] py-10 px-10 flex flex-col justify-center">
       <motion.h2 variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden" className="h2 text-center mb-1">Contact</motion.h2>
       <motion.p variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden" className="text-white/60 text-center mb-5">Thank you for giving me your information</motion.p>
       {error && error !== "" ? <Message msgStatus={`bg-${status}`}>{error}</Message> : <></>}

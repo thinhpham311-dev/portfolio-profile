@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants';
 
 const Project = () => {
-  return <div className="h-full xl:py-36 relative flex items-center">
+  return <div className="h-full relative flex items-center">
     <ParticlesContainer />
     <div className="container mx-auto">
       <div className="mb-5">

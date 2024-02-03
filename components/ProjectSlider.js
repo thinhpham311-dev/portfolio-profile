@@ -23,7 +23,7 @@ const ProjectSlider = () => {
       modules={[Pagination, Navigation]}
     >
       {
-        data.slides.map((item, index) => <SwiperSlide key={index}>
+        data.slides?.map((item, index) => <SwiperSlide key={index}>
           <div className=" grid gap-3 xl:grid-cols-3 xl:grid-rows-2 grid-cols-2 grid-rows-3 cursor-pointer shadow-indigo-500/40">
             {item.images.map((image, index) => <div key={index} className="after:h-0 overflow-hidden rounded-lg flex justify-center items-center group bg-white">
               <div className="flex justify-center items-center relative overflow-hidden h-full">
@@ -32,7 +32,6 @@ const ProjectSlider = () => {
                   <span className="mr-2"> Visit page </span> <FiExternalLink />
                 </Link>
               </div>
-
             </div>)}
           </div>
         </SwiperSlide>)

@@ -2,7 +2,6 @@
 import ProjectBtn from "../components/ProjectsBtn"
 import Avatar from "../components/Avatar"
 import ParticlesContainer from "../components/ParticlesContainer"
-import Circles from "../components/Circles"
 //framer motion
 import { motion } from "framer-motion"
 
@@ -25,7 +24,7 @@ const Home = () => {
         </motion.div>
       </div>
       <motion.div variants={fadeIn('up', 0.6)} initial="hidden" animate="show" exit="hidden" transition={{ duration: 1, ease: 'easeInOut' }} className="w-full h-full flex-1  xl:block hidden  max-w-[45%] max-h-[678px] relative ">
-        <div className="absolute h-[350px] w-[350px] shadow-lg overflow-hidden top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 rounded-full bg-transparent border-8 border-white">
+        <div className="absolute h-[400px] w-[400px] shadow-lg overflow-hidden top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 rounded-full bg-transparent border-8 border-white">
           <Avatar _w={737} _h={678} source="/avatar-bg-thinhpham.jpg" />
         </div>
       </motion.div>

@@ -13,11 +13,11 @@ import { MdEmail } from "react-icons/md"
 
 
 const Header = () => {
-  return <header className=" z-30 w-full flex items-center xl:px-0 h-[100px]">
-    <motion.div variants={fadeIn('down', 1)} initial="hidden" animate="show" exit="hidden" className="container mx-auto xl:flex block xl:justify-between justify-evenly items-center ">
-      <div className="logo font-bold flex justify-center flex-wrap gap-x-5">
-        <Link href="tel:0702895474" className="flex items-center text-[13px] xl:text-lg"><span className="font-thin mr-1"><BsPhoneFill /> </span>0702895474</Link>
-        <Link href="" className="flex items-center text-[13px] xl:text-lg"><span className="font-thin mr-1"><MdEmail /></span> thinhpham67ag@gmail.com</Link>
+  return <header className=" z-30 w-full flex items-center  xl:px-0 h-[100px]">
+    <motion.div variants={fadeIn('down', 1)} initial="hidden" animate="show" exit="hidden" className="container mx-auto flex xl:flex-row flex-col justify-between gap-3 items-center ">
+      <div className="logo flex justify-center flex-wrap gap-x-5">
+        <Link href="tel:0702895474" className="flex items-center  xl:text-lg"><p className="font-thin mr-1"><BsPhoneFill /> </p>0702895474</Link>
+        <Link href="" className="flex items-center  xl:text-lg"><p className="font-thin mr-1"><MdEmail /></p> thinhpham67ag@gmail.com</Link>
       </div>
       <Social />
     </motion.div>
