@@ -134,80 +134,104 @@ export const PROJECTLIST_DATA = {
     {
       images: [
         {
-          title: 'title',
-          path: '/project-01.png',
-          src: 'https://tnbaura.vc'
+          title: 'TNB AURA',
+          path: '/projects/project-01.png',
+          src: 'https://tnbaura.vc',
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'Not So Little Fair',
+          path: '/projects/project-02.png',
+          src: 'https://rsvp.notsolittlefair.com',
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'NTUC Conversation',
+          path: '/projects/project-03.png',
+          src: "https://conversations.ntuc.sg",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'Golf Live',
+          path: '/projects/project-04.png',
+          src: "https://www.igx360.com/vi-VN",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'Child Ed',
+          path: '/projects/project-05.png',
+          src: "https://www.childed.com.sg/",
+          companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'title',
-          path: '/project-2.png',
-          src: 'https://rsvp.notsolittlefair.com'
-        },
-        {
-          title: 'title',
-          path: '/project-3.png',
-          src: "https://conversations.ntuc.sg"
-        },
-        {
-          title: 'title',
-          path: '/project-4.png',
-          src: "https://www.igx360.com/vi-VN"
-        },
-        {
-          title: 'title',
-          path: '/project-5.png',
-          src: "https://bado.vn"
-        },
-        {
-          title: 'title',
-          path: '/project-6.png',
-          src: "https://maxwellreserve.com"
+          path: '/projects/project-06.png',
+          src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app",
+          companyImage: '/logo/logo-techvsi.webp'
         },
       ],
     },
     {
       images: [
+        {
+          title: 'title',
+          path: '/projects/project-07.png',
+          src: "https://maxwellreserve.com",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'title',
+          path: '/projects/project-08.png',
+          src: "https://officersmesspolobar.sg",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'title',
+          path: '/projects/project-09.png',
+          src: "https://shikar.sg",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'title',
+          path: '/projects/project-010.png',
+          src: "https://pttmovies.vercel.app",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'title',
+          path: '/projects/project-011.png',
+          src: "https://portfolio-animation-zeta.vercel.app/",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'title',
+          path: '/projects/project-0121.png',
+          src: "https://bado.vn",
+          companyImage: '/logo/logo-paptech.webp',
 
-        {
-          title: 'title',
-          path: '/project-7.png',
-          src: "https://officersmesspolobar.sg"
         },
-        {
-          title: 'title',
-          path: '/project-8.png',
-          src: "https://shikar.sg"
-        },
-        {
-          title: 'title',
-          path: '/project-9.png',
-          src: "https://pttmovies.vercel.app"
-        },
-        {
-          title: 'title',
-          path: '/project-10.png',
-          src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app"
-        },
-        {
-          title: 'title',
-          path: '/project-12.png',
-          src: "https://portfolio-animation-zeta.vercel.app/"
-        },
-        {
-          title: 'title',
-          path: '/project-13.png',
-          src: "https://catalog-business.vercel.app/"
-        }
       ],
     },
     ,
     {
       images: [
-
         {
           title: 'title',
-          path: '/project-14.png',
-          src: "https://chat-gpt-thinhpham.vercel.app"
+          path: '/projects/project-013.png',
+          src: "https://catalog-business.vercel.app/",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'title',
+          path: '/projects/project-014.png',
+          src: "https://chat-gpt-thinhpham.vercel.app",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'title',
+          path: '/projects/project-015.png',
+          src: "https://chat-gpt-thinhpham.vercel.app",
+          companyImage: '/logo/logo-techvsi.webp'
         }
       ],
     },
