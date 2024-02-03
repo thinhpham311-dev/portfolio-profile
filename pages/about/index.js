@@ -26,7 +26,7 @@ const About = () => {
       <div className="flex flex-col justify-center xl:flex-1 h-[300px]">
         <motion.h1 className="h1 xl:text-left" variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden">About <span className="text-accent">me</span></motion.h1>
         <motion.p className="xl:text-left w-full xl:max-w-[84%] xl:mb-8 mb-5" variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden"> I am a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience.  It's also an opportunity to enhance my knowledge by engaging in new challenges. </motion.p>
-        <motion.form method="get" action="/PhamTriThinh-0702895474-frontendwebdeveloper.pdf" className="xl:justify-start gap-x-5 justify-center flex" variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden">
+        <motion.form method="get" action="/PhamTriThinh_0702895474_webdeveloper.pdf" className="xl:justify-start gap-x-5 justify-center flex" variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden">
           <Button type="submit" styles=" xl:py-2 xl:px-3 py-1 px-2 bg-transparent border-accent border-2 hover:bg-accent rounded-lg"><BsDownload className="mr-3" />Download CV</Button>
           <Link href="https://github.com/thinhpham311-dev" target="_blank">
             <Button type="button" styles=" xl:py-2 xl:px-3 py-1 px-2 bg-accent border-accent border-2 hover:bg-accent/50 hover:border-accent/50 hover:border-2 rounded-lg"><BsGithub className="mr-3" />Github</Button>
