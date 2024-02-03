@@ -23,7 +23,7 @@ const About = () => {
   return <div className="text-center xl:text-left py-0 xl:py-20 h-full relative">
 
     <div className="container h-full mx-auto px-5 flex flex-col items-center xl:flex-row xl:gap-x-10 gap-x-4">
-      <div className="flex flex-col justify-center xl:flex-1 h-[300px] xl:mt-10">
+      <div className="flex flex-col justify-center xl:flex-1 h-[300px]">
         <motion.h1 className="h1 xl:text-left" variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden">About <span className="text-accent">me</span></motion.h1>
         <motion.p className="xl:text-left w-full xl:max-w-[84%] xl:mb-8 mb-5" variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden"> I am a Web Developer with my experience developing the website. I can use my knowledge and skills to increase aesthetics and increase user experience.  It's also an opportunity to enhance my knowledge by engaging in new challenges. </motion.p>
         <motion.form method="get" action="/PhamTriThinh-0702895474-frontendwebdeveloper.pdf" className="xl:justify-start gap-x-5 justify-center flex" variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden">
@@ -39,7 +39,7 @@ const About = () => {
           {data.map((item, indexItem) => <div key={indexItem} onClick={() => setIndex(indexItem)} className={`${index === indexItem && "text-accent after:!bg-accent after:w-full after:transition-all after:duration-300"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}>{item.title}</div>)}
         </motion.div>
         <motion.div variants={fadeIn('down', 0.6)} initial="hidden" animate="show" exit="hidden" className='h-[calc(100dvh-550px)] overflow-y-auto'>
-          <div className=' flex flex-col xl:gap-y-8 gap-y-2'>
+          <div className=' flex flex-col xl:gap-y-4 gap-y-2'>
             {data[index].info.map((item, indexItem) => <div key={indexItem} className='mx-auto xl:mx-0 flex-1 flex-col md:flex-row max-w-max text-white/60'>
               <h3 className="capitalize mb-2">{item.title}</h3>
               <div className='text-white'>{item.stage}</div>
