@@ -135,38 +135,38 @@ export const PROJECTLIST_DATA = {
       images: [
         {
           title: 'TNB AURA',
-          path: '/projects/project-01.png',
+          path: '/projects/project-TNB_Aura.png',
           src: 'https://tnbaura.vc',
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'Not So Little Fair',
-          path: '/projects/project-02.png',
+          path: '/projects/project-Not_So_Little_Fair.png',
           src: 'https://rsvp.notsolittlefair.com',
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'NTUC Conversation',
-          path: '/projects/project-03.png',
+          path: '/projects/project-NTUC_Conversation.png',
           src: "https://conversations.ntuc.sg",
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'Golf Live',
-          path: '/projects/project-04.png',
+          path: '/projects/project-Golf_Live.png',
           src: "https://www.igx360.com/vi-VN",
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'Child Ed',
-          path: '/projects/project-05.png',
+          path: '/projects/project-Child_Ed.png',
           src: "https://www.childed.com.sg/",
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
-          title: 'title',
-          path: '/projects/project-06.png',
-          src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app",
+          title: 'Sony ZV Story',
+          path: '/projects/project-Sony_ZV_Story.png',
+          src: "https://alphauniverse.sony-asia.com/microsite/your-zv-story",
           companyImage: '/logo/logo-techvsi.webp'
         },
       ],
@@ -174,42 +174,43 @@ export const PROJECTLIST_DATA = {
     {
       images: [
         {
-          title: 'title',
-          path: '/projects/project-07.png',
+          title: 'Maxwell Reserve',
+          path: '/projects/project-Maxwell_Reserve.png',
           src: "https://maxwellreserve.com",
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
-          title: 'title',
-          path: '/projects/project-08.png',
+          title: 'Officers Mess Polo Bar',
+          path: '/projects/project-Officer_Polo_Bar.png',
           src: "https://officersmesspolobar.sg",
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
-          title: 'title',
-          path: '/projects/project-09.png',
+          title: 'Shikar',
+          path: '/projects/project-Shikar.png',
           src: "https://shikar.sg",
           companyImage: '/logo/logo-techvsi.webp'
         },
+
         {
-          title: 'title',
-          path: '/projects/project-010.png',
-          src: "https://pttmovies.vercel.app",
-          companyImage: '/logo/logo-techvsi.webp'
-        },
-        {
-          title: 'title',
-          path: '/projects/project-011.png',
+          title: 'Chess DB',
+          path: '/projects/project-Chess_DB.png',
           src: "https://portfolio-animation-zeta.vercel.app/",
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
-          title: 'title',
-          path: '/projects/project-0121.png',
-          src: "https://bado.vn",
+          title: 'Sidekick Find Expert',
+          path: '/projects/project-Sidekick.png',
+          src: "https://play.google.com/store/apps/details?id=com.sidekick.android",
           companyImage: '/logo/logo-paptech.webp',
-
         },
+        {
+          title: 'Bado Catalog',
+          path: '/projects/project-Bado_Catalog.png',
+          src: "https://chessdb.vn/",
+          companyImage: '/logo/logo-paptech.webp',
+        },
+
       ],
     },
     ,
@@ -217,22 +218,28 @@ export const PROJECTLIST_DATA = {
       images: [
         {
           title: 'title',
-          path: '/projects/project-013.png',
+          path: '/projects/project-Portfolio_Profile.png',
+          src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app",
+          companyImage: '/logo/logo-techvsi.webp'
+        },
+        {
+          title: 'title',
+          path: '/projects/project-Magma_Clone.png',
           src: "https://catalog-business.vercel.app/",
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'title',
-          path: '/projects/project-014.png',
+          path: '/projects/project-ChatGPT_Clone.png',
           src: "https://chat-gpt-thinhpham.vercel.app",
           companyImage: '/logo/logo-techvsi.webp'
         },
         {
-          title: 'title',
-          path: '/projects/project-015.png',
-          src: "https://chat-gpt-thinhpham.vercel.app",
+          title: 'PTT Movies',
+          path: '/projects/project-PTT_Movies.png',
+          src: "https://pttmovies.vercel.app",
           companyImage: '/logo/logo-techvsi.webp'
-        }
+        },
       ],
     },
   ],
