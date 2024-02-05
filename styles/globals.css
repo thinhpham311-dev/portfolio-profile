@@ -4,6 +4,8 @@
 
 .swiper {
   padding-bottom: 40px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
 }
 
 .translate-z-0 {
@@ -15,16 +17,29 @@
   background-color: #f13024;
 }
 
+.swiper-button-next {
+  right: 20px !important;
+}
+
+.swiper-button-prev {
+  left: 20px !important;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   top: 50%;
   transform: translateY(-50%);
+  height: 50px !important;
+  width: 50px !important;
+  background: #fff;
+  border-radius: 50px;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
+  font-size: 20px !important;
   color: #f13024;
 }
 

@@ -6,7 +6,7 @@ import {
   HiEnvelope,
 } from 'react-icons/hi2';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaBootstrap, FaPhp } from 'react-icons/fa'
-import { SiNextdotjs, SiFramer, SiAntdesign, SiSvelte, SiGatsby, SiMysql, SiPostgresql, SiTailwindcss } from 'react-icons/si'
+import { SiNextdotjs, SiFramer, SiAntdesign, SiSvelte, SiGatsby, SiMysql, SiPostgresql, SiTailwindcss, SiLaravel } from 'react-icons/si'
 import { RxDesktop, RxReader, RxRocket } from "react-icons/rx"
 
 // nav data
@@ -29,36 +29,85 @@ export const RESUMELIST_DATA = [
       {
         title: 'Programing Language',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaPhp />
-        ],
+          {
+            title: "Html 5",
+            icon: <FaHtml5 />,
+          },
+          {
+            title: "CSS 3",
+            icon: < FaCss3 />,
+          },
+          {
+            title: "Javascript",
+            icon: <FaJs />,
+          },
+          {
+            title: "PHP",
+            icon: <FaPhp />,
+          }
+        ]
       },
       {
         title: 'Framework',
         icons: [
-          <FaReact />,
-          <SiNextdotjs />,
-          <FaWordpress />,
-          <SiSvelte />,
-          <SiGatsby />,
-        ],
+          {
+            title: "React JS",
+            icon: <FaReact />,
+          },
+          {
+            title: "Next JS",
+            icon: <SiNextdotjs />,
+          },
+          {
+            title: "Wordpress",
+            icon: <FaWordpress />,
+          },
+          {
+            title: "Laravel",
+            icon: <SiLaravel />,
+          },
+          {
+            title: "Svelte",
+            icon: <SiSvelte />,
+          },
+          {
+            title: "Gatsby",
+            icon: <SiGatsby />,
+          }
+        ]
       },
       {
         title: 'UI',
         icons: [
-          <FaBootstrap />,
-          <SiAntdesign />,
-          <SiFramer />,
-          <SiTailwindcss />
+          {
+            title: "Bootstrap",
+            icon: <FaBootstrap />,
+          },
+          {
+            title: "Html 5",
+            icon: <SiAntdesign />,
+          },
+          {
+            title: "Framer Motion",
+            icon: <SiFramer />,
+          },
+          {
+            title: "Tailwind CSS",
+            icon: <SiTailwindcss />,
+          }
         ]
       },
       {
         title: 'Database',
         icons: [
-          <SiMysql />,
-          <SiPostgresql />
+          {
+            title: "MySQL",
+            icon: < SiMysql />,
+          },
+          {
+            title: "PostgreSQL",
+            icon: <SiPostgresql />,
+          }
         ],
       }
     ],
@@ -177,32 +226,32 @@ export const PROJECTLIST_DATA = {
           title: 'Maxwell Reserve',
           path: '/projects/project-Maxwell_Reserve.png',
           src: "https://maxwellreserve.com",
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-antking.webp'
         },
         {
           title: 'Officers Mess Polo Bar',
           path: '/projects/project-Officer_Polo_Bar.png',
           src: "https://officersmesspolobar.sg",
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-antking.webp'
         },
         {
           title: 'Shikar',
           path: '/projects/project-Shikar.png',
           src: "https://shikar.sg",
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-antking.webp'
         },
 
         {
           title: 'Chess DB',
           path: '/projects/project-Chess_DB.png',
           src: "https://portfolio-animation-zeta.vercel.app/",
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-antking.webp'
         },
         {
           title: 'Sidekick Find Expert',
           path: '/projects/project-Sidekick.png',
           src: "https://play.google.com/store/apps/details?id=com.sidekick.android",
-          companyImage: '/logo/logo-paptech.webp',
+          companyImage: '/logo/logo-antking.webp'
         },
         {
           title: 'Bado Catalog',
@@ -220,25 +269,21 @@ export const PROJECTLIST_DATA = {
           title: 'title',
           path: '/projects/project-Portfolio_Profile.png',
           src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app",
-          companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'title',
           path: '/projects/project-Magma_Clone.png',
           src: "https://catalog-business.vercel.app/",
-          companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'title',
           path: '/projects/project-ChatGPT_Clone.png',
           src: "https://chat-gpt-thinhpham.vercel.app",
-          companyImage: '/logo/logo-techvsi.webp'
         },
         {
           title: 'PTT Movies',
           path: '/projects/project-PTT_Movies.png',
           src: "https://pttmovies.vercel.app",
-          companyImage: '/logo/logo-techvsi.webp'
         },
       ],
     },

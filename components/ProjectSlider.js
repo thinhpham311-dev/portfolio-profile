@@ -20,6 +20,7 @@ const ProjectSlider = () => {
     <Swiper
       pagination={{ clickable: true }}
       navigation={true}
+      spaceBetween={10}
       modules={[Pagination, Navigation]}
     >
       {
