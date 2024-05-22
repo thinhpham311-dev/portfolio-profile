@@ -244,7 +244,7 @@ export const PROJECTLIST_DATA = {
         {
           title: 'Chess DB',
           path: '/projects/project-Chess_DB.png',
-          src: "https://portfolio-animation-zeta.vercel.app/",
+          src: "https://chessdb.vn",
           companyImage: '/logo/logo-antking.webp'
         },
         {

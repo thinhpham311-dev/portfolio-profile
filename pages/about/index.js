@@ -44,7 +44,7 @@ const About = () => {
               <div className=''>{item.stage}</div>
               <div className='flex flex-wrap xl:justify-start justify-center gap-x-4'>
                 {
-                  item.icons?.map((childItem, indexIcon) => <div key={indexIcon} className='text-2xl flex flex-col items-center text-white transition-all p-2'>
+                  item.icons?.map((childItem, indexIcon) => <div key={indexIcon} className='text-2xl flex flex-col items-center text-white transition-all xl:p-2 p-0'>
                     {childItem?.icon}
                     <span className="text-[10px]">{childItem.title}</span>
                   </div>)
