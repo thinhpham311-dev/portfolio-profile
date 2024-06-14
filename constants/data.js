@@ -256,7 +256,7 @@ export const PROJECTLIST_DATA = {
         {
           title: 'Bado Catalog',
           path: '/projects/project-Bado_Catalog.png',
-          src: "https://chessdb.vn/",
+          src: "https://bado.vn/",
           companyImage: '/logo/logo-paptech.webp',
         },
 
