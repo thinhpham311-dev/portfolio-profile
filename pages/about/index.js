@@ -24,7 +24,7 @@ const About = () => {
     <div className="container h-full mx-auto px-5 flex flex-col items-center xl:flex-row xl:gap-x-10 gap-x-4">
       <div className="flex flex-col justify-center xl:flex-1 h-[300px]">
         <motion.h1 className="h1 xl:text-left" variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden">About <span className="text-accent">me</span></motion.h1>
-        <motion.p className="xl:text-left w-full xl:max-w-[84%] xl:mb-8 mb-5" variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden"> I am a Web Developer with experience in developing websites. I have around 3 years of experience in web development and I am also passionate about UX/UI and web performance. I can utilize my experience and skills to enhance aesthetics and improve user experience.</motion.p>
+        <motion.p className="xl:text-left w-full xl:max-w-[84%] xl:mb-8 mb-5" variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden"> I am a Web Developer with experience in developing websites. I have 3 years of experience in web development and I am also passionate about UX/UI and web performance. I can utilize my experience and skills to enhance aesthetics and improve user experience.</motion.p>
         <motion.form method="get" action="/PhamTriThinh-0702895474-webdeveloper.pdf" className="xl:justify-start gap-x-5 justify-center flex" variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden">
           <Button type="submit" styles=" xl:py-2 xl:px-3 py-1 px-2 bg-transparent border-accent border-2 hover:bg-accent rounded-lg"><BsDownload className="mr-3" />Download CV</Button>
           <Link href="https://github.com/thinhpham311-dev" target="_blank">
