@@ -116,16 +116,16 @@ export const RESUMELIST_DATA = [
     title: 'experience',
     info: [
       {
-        title: 'Front end Web Developer - PAP Technology company',
-        stage: '2020/06 - 2021/12',
+        title: 'Front End Developer - TechVSI company',
+        stage: '2023/01 - 2023/08',
       },
       {
         title: 'Web Developer - Antking Singapore Company',
-        stage: '2022/03 - 2022/06',
+        stage: '2022/02 - 2022/12',
       },
       {
-        title: 'Front End Developer - TechVSI company',
-        stage: '2023/01 - 2023/07',
+        title: 'Front end Web Developer - PAP Technology company',
+        stage: '2020/06 - 2021/12',
       },
     ]
   }, {
