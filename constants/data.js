@@ -125,7 +125,7 @@ export const RESUMELIST_DATA = [
       },
       {
         title: 'Front end Developer - PAP Technology company',
-        stage: '2020/06 - 2021/12',
+        stage: '06/2020 - 12/2021',
       },
     ]
   }, {
