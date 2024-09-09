@@ -133,11 +133,11 @@ export const RESUMELIST_DATA = [
     info: [
       {
         title: 'SoftWare Engineering Certificate',
-        stage: '2017/05 - 2020/09',
+        stage: '05/2017 - 09/2020',
       },
       {
         title: 'B English Certificate',
-        stage: '2019/03',
+        stage: '03/2019',
       }
     ]
   },
