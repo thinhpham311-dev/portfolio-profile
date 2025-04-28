@@ -20,7 +20,7 @@ const About = () => {
   const [index, setIndex] = useState(0)
   const data = RESUMELIST_DATA
 
-  return <div className="text-center xl:text-left py-0 xl:py-20 h-full relative">
+  return <div className="text-center xl:text-left  h-full relative">
     <div className="container h-full mx-auto px-5 flex flex-col items-center xl:flex-row xl:gap-x-10 gap-x-4">
       <div className="flex flex-col justify-center xl:flex-1 h-[300px]">
         <motion.h1 className="h1 xl:text-left" variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden">About <span className="text-accent">me</span></motion.h1>

@@ -273,7 +273,7 @@ export const PROJECTLIST_DATA = {
         {
           title: 'title',
           path: '/projects/project-Magma_Clone.png',
-          src: "https://catalog-business.vercel.app/",
+          src: "https://catalog-business.vercel.app",
         },
         {
           title: 'title',
@@ -284,6 +284,11 @@ export const PROJECTLIST_DATA = {
           title: 'PTT Movies',
           path: '/projects/project-PTT_Movies.png',
           src: "https://pttmovies.vercel.app",
+        },
+        {
+          title: 'Ecommerce Test Local',
+          path: '/projects/project-Ecommerce-Local.png',
+          src: "https://ecommerce-test-vert.vercel.app",
         },
       ],
     },
