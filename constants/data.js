@@ -177,93 +177,102 @@ export const SERVICELIST_DATA = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   }
 ];
-
 export const PROJECTLIST_DATA = {
   slides: [
     {
+      companyName: 'TechVSI Company',
+      companyKey: 'techvsi-company',
       images: [
         {
           title: 'TNB AURA',
           path: '/projects/project-TNB_Aura.png',
           src: 'https://tnbaura.vc',
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'Not So Little Fair',
           path: '/projects/project-Not_So_Little_Fair.png',
           src: 'https://rsvp.notsolittlefair.com',
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'NTUC Conversation',
           path: '/projects/project-NTUC_Conversation.png',
           src: "https://conversations.ntuc.sg",
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'Golf Live',
           path: '/projects/project-Golf_Live.png',
           src: "https://www.igx360.com/vi-VN",
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'Child Ed',
           path: '/projects/project-Child_Ed.png',
           src: "https://www.childed.com.sg/",
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'Sony ZV Story',
           path: '/projects/project-Sony_ZV_Story.png',
           src: "https://alphauniverse.sony-asia.com/microsite/your-zv-story",
-          companyImage: '/logo/logo-techvsi.webp'
+          companyImage: '/logo/logo-techvsi.webp',
         },
       ],
     },
     {
+      companyName: 'Antking Company',
+      companyKey: 'antking-company',
       images: [
         {
           title: 'Maxwell Reserve',
           path: '/projects/project-Maxwell_Reserve.png',
           src: "https://maxwellreserve.com",
-          companyImage: '/logo/logo-antking.webp'
+          companyImage: '/logo/logo-antking.webp',
         },
         {
           title: 'Officers Mess Polo Bar',
           path: '/projects/project-Officer_Polo_Bar.png',
           src: "https://officersmesspolobar.sg",
-          companyImage: '/logo/logo-antking.webp'
+          companyImage: '/logo/logo-antking.webp',
         },
         {
           title: 'Shikar',
           path: '/projects/project-Shikar.png',
           src: "https://shikar.sg",
-          companyImage: '/logo/logo-antking.webp'
+          companyImage: '/logo/logo-antking.webp',
         },
-
         {
           title: 'Chess DB',
           path: '/projects/project-Chess_DB.png',
           src: "https://chessdb.vn",
-          companyImage: '/logo/logo-antking.webp'
+          companyImage: '/logo/logo-antking.webp',
         },
         {
           title: 'Sidekick Find Expert',
           path: '/projects/project-Sidekick.png',
           src: "https://play.google.com/store/apps/details?id=com.sidekick.android",
-          companyImage: '/logo/logo-antking.webp'
+          companyImage: '/logo/logo-antking.webp',
         },
+
+      ],
+    },
+    {
+      companyName: 'Paptech Company',
+      companyKey: 'paptech-company',
+      images: [
         {
           title: 'Bado Catalog',
           path: '/projects/project-Bado_Catalog.png',
           src: "https://bado.vn/",
           companyImage: '/logo/logo-paptech.webp',
         },
-
       ],
     },
-    ,
     {
+      companyName: 'Personal Project',
+      companyKey: 'personal-project',
       images: [
         {
           title: 'title',

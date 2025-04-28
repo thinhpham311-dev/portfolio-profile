@@ -1,46 +1,110 @@
-import Image from 'next/image'
-import Link from 'next/link'
-// Import Swiper React components
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from "swiper/modules"
+import { Pagination, Navigation } from 'swiper/modules';
+import { FiExternalLink } from 'react-icons/fi';
+import { FaUserClock } from 'react-icons/fa';
 
-import { FiExternalLink } from "react-icons/fi"
-import { FaUserClock } from "react-icons/fa"
-// Import Swiper styles
-
-// data
-import { PROJECTLIST_DATA } from "../constants"
+import { PROJECTLIST_DATA } from '../constants';
 
 const ProjectSlider = () => {
-  const data = PROJECTLIST_DATA
-  return <>
-    <Swiper
-      pagination={{ clickable: true }}
-      navigation={true}
-      spaceBetween={10}
-      modules={[Pagination, Navigation]}
-    >
-      {
-        data.slides?.map((item, index) => <SwiperSlide key={index}>
-          <div className=" grid xl:gap-3 gap-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 xl:grid-rows-2 grid-cols-1 grid-rows-2 cursor-pointer shadow-indigo-500/40">
-            {item.images.map((image, index) => <div key={index} className="after:h-0 overflow-hidden xl:rounded-lg flex justify-center items-center group bg-black">
-              <div className="flex justify-center items-center relative overflow-hidden xl:h-full xl:w-full lg:h-full md:h-[20dvh] h-[12dvh]">
-                <div className="absolute top-2 right-2 bg-black shadow-lg  p-1 h-[40px] w-[40px] flex items-center justify-center rounded-full z-50">
-                  <a href={image?.companyLink} target="_blank">
-                    {image?.companyImage ? <Image src={image?.companyImage} width={30} height={30} alt="" /> : <FaUserClock />}
+  // Lấy tất cả companyKey từ PROJECTLIST_DATA
+  const companyKeys = PROJECTLIST_DATA.slides.map((slide) => slide.companyKey);
+
+  // Set công ty mặc định là công ty đầu tiên theo companyKey
+  const [selectedCompanyKey, setSelectedCompanyKey] = useState(companyKeys[0]);
+
+  // Lọc các hình ảnh theo companyKey đã chọn
+  const filteredImages = PROJECTLIST_DATA.slides.find(
+    (slide) => slide.companyKey === selectedCompanyKey
+  )?.images || [];
+
+  return (
+    <div className="w-full max-w-[1400px] mx-auto px-4">
+
+      {/* Tabs */}
+      <div className="flex flex-wrap justify-center gap-3 mb-6 relative z-50">
+        {companyKeys.map((companyKey, idx) => {
+          const companyName = PROJECTLIST_DATA.slides.find(slide => slide.companyKey === companyKey)?.companyName;
+
+          return (
+            <button
+              key={idx}
+              onClick={() => setSelectedCompanyKey(companyKey)}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${selectedCompanyKey === companyKey
+                ? 'bg-violet-500 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-violet-100'
+                }`}
+            >
+              {companyName} {/* Hiển thị tên công ty */}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Slider */}
+      <Swiper
+        key={selectedCompanyKey} // Re-render khi thay đổi công ty
+        pagination={{ clickable: true }}
+        navigation={true}
+        spaceBetween={20}
+        modules={[Pagination, Navigation]}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {filteredImages.length > 0 ? (
+          filteredImages.map((image, idx) => (
+            <SwiperSlide key={idx}>
+              <div className="relative overflow-hidden rounded-lg group bg-black h-[25vh] md:h-[30vh] lg:h-[30vh] flex items-center justify-center">
+
+                {/* Logo Công ty */}
+                <div className="absolute top-2 right-2 bg-black bg-opacity-70 p-2 rounded-full z-10">
+                  <a href={image?.src} target="_blank" rel="noopener noreferrer">
+                    {image?.companyImage ? (
+                      <Image src={image.companyImage} width={24} height={24} alt="Company" />
+                    ) : (
+                      <FaUserClock className="text-white" />
+                    )}
                   </a>
                 </div>
-                <Image src={image.path} width={500} height={300} alt={image.title} className="object-cover object-left-top h-full" />
-                <Link href={image.src} target="_blank" className="absolute inset-0 h-full w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-80 transition-all duration-300 flex items-center justify-center">
-                  <span className="mr-2"> Visit page </span> <FiExternalLink />
+
+                {/* Hình ảnh chính */}
+                <Image
+                  src={image.path}
+                  alt={image.title}
+                  width={500}
+                  height={300}
+                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                />
+
+                {/* Overlay Link */}
+                <Link
+                  href={image.src}
+                  target="_blank"
+                  className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-80 transition-all duration-300"
+                >
+                  <span className="text-white font-semibold flex items-center gap-2">
+                    Visit Page <FiExternalLink />
+                  </span>
                 </Link>
+
               </div>
-            </div>)}
+            </SwiperSlide>
+          ))
+        ) : (
+          <div className="text-center py-10 text-gray-500">
+            No project found for this company.
           </div>
-        </SwiperSlide>)
-      }
-    </Swiper>
-  </>;
+        )}
+      </Swiper>
+    </div>
+  );
 };
 
 export default ProjectSlider;
