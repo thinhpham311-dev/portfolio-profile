@@ -299,6 +299,11 @@ export const PROJECTLIST_DATA = {
           path: '/projects/project-Ecommerce-Local.png',
           src: "https://ecommerce-test-vert.vercel.app",
         },
+        {
+          title: 'Market Place',
+          path: '/projects/project-Market_Place.png',
+          src: "https://market-place-web-gilt.vercel.app/",
+        },
       ],
     },
   ],
