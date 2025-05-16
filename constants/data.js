@@ -2,11 +2,10 @@ import {
   HiHome,
   HiUser,
   HiViewColumns,
-  HiRectangleGroup,
   HiEnvelope,
 } from 'react-icons/hi2';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaBootstrap, FaPhp } from 'react-icons/fa'
-import { SiNextdotjs, SiFramer, SiAntdesign, SiSvelte, SiGatsby, SiMysql, SiPostgresql, SiTailwindcss, SiLaravel } from 'react-icons/si'
+import { SiNextdotjs, SiFramer, SiTailwindcss } from 'react-icons/si'
 import { RxDesktop, RxReader, RxRocket } from "react-icons/rx"
 
 // nav data
@@ -61,18 +60,6 @@ export const RESUMELIST_DATA = [
           {
             title: "Wordpress",
             icon: <FaWordpress />,
-          },
-          {
-            title: "Laravel",
-            icon: <SiLaravel />,
-          },
-          {
-            title: "Svelte",
-            icon: <SiSvelte />,
-          },
-          {
-            title: "Gatsby",
-            icon: <SiGatsby />,
           }
         ]
       },
@@ -84,10 +71,6 @@ export const RESUMELIST_DATA = [
             icon: <FaBootstrap />,
           },
           {
-            title: "Html 5",
-            icon: <SiAntdesign />,
-          },
-          {
             title: "Framer Motion",
             icon: <SiFramer />,
           },
@@ -96,19 +79,6 @@ export const RESUMELIST_DATA = [
             icon: <SiTailwindcss />,
           }
         ]
-      },
-      {
-        title: 'Database',
-        icons: [
-          {
-            title: "MySQL",
-            icon: < SiMysql />,
-          },
-          {
-            title: "PostgreSQL",
-            icon: <SiPostgresql />,
-          }
-        ],
       }
     ],
   },
