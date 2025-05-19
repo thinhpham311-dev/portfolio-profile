@@ -52,7 +52,7 @@ export default function ProjectDetailPage({ project, previousProject, nextProjec
             {/* Breadcrumb */}
             {!isFullscreen && (
                 <nav
-                    className="text-sm sticky top-0 z-10 transition-colors duration-300 px-6 py-3 flex items-center justify-between"
+                    className="text-sm sticky top-0 z-10 transition-colors duration-300 md:px-6 py-3 flex items-center justify-between"
                     aria-label="Breadcrumb"
                 >
                     <ol className="flex items-center space-x-2 text-sm">
@@ -74,25 +74,85 @@ export default function ProjectDetailPage({ project, previousProject, nextProjec
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
-                className={`rounded-2xl shadow-xl overflow-auto z-40 relative 
+                className={`rounded-2xl shadow-xl overflow-auto z-40 relative flex flex-col justify-between
                 ${isFullscreen
-                        ? 'h-screen p-6 md:p-10 mt-10'
-                        : 'max-h-[calc(100vh-250px)] h-full px-5'
+                        ? 'h-screen md:px-6 px-3 pt-5  '
+                        : 'max-h-[calc(100vh-250px)] h-full md:px-6'
                     }`}
             >
+                <div className='flex flex-col '>
+                    {/* Header */}
+                    <div className="flex items-center justify-between mb-6 px-4">
+                        <div className="flex items-center space-x-4">
+                            {project.companyImage ? (
+                                <div className="w-[100px] h-[50px] p-2 shadow-inner flex items-center justify-center">
+                                    <img src={project.companyImage} alt="Company Logo" className="max-w-full max-h-full object-contain" />
+                                </div>
+                            ) : (
+                                <FaUserClock size={30} />
+                            )}
+                            {!isFullscreen &&
+                                <div className="flex flex-col justify-center h-[50px]">
+                                    <motion.span
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.2 }}
+                                        className="text-xs text-white-500 uppercase tracking-wide leading-none">Project</motion.span>
+                                    <motion.h1
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.2 }}
+                                        className="text-2xl font-bold text-white-800 leading-tight"
+                                    >
+                                        {project.title}
+                                    </motion.h1>
+                                </div>
+                            }
+                        </div>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className='flex items-center'
+                        >
+                            {isFullscreen && (
+                                <button
+                                    onClick={toggleFullscreen}
+                                    className="   z-50 text-white bg-black/50 p-2 rounded-full hover:bg-black/70 transition"
+                                >
+                                    <MdOutlineFullscreenExit size={22} />
+                                </button>
+                            )}
+                            <Link
+                                href={project.src}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex text-sm items-center gap-3 hover:underline text-white font-semibold rounded-lg"
+                            >
+                                <span className='md:block hidden'>Visit Page</span> <FaArrowRightLong />
+                            </Link>
 
-                {/* Header */}
-                <div className="flex items-center justify-between mb-6 px-4">
-                    <div className="flex items-center space-x-4">
-                        {project.companyImage ? (
-                            <div className="w-[100px] h-[50px] p-2 shadow-inner flex items-center justify-center">
-                                <img src={project.companyImage} alt="Company Logo" className="max-w-full max-h-full object-contain" />
-                            </div>
-                        ) : (
-                            <FaUserClock size={30} />
-                        )}
+                        </motion.div>
+                    </div>
+                    {/* Image */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.4 }}
+                    >
+                        <img
+                            src={project.path}
+                            alt={project.title}
+                            className="w-full h-auto shadow-lg mb-6"
+                        />
+                    </motion.div>
+                    {isFullscreen &&
                         <div className="flex flex-col justify-center h-[50px]">
-                            <span className="text-sm text-white-500 uppercase tracking-wide leading-none">Project</span>
+                            <motion.span
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="text-sm text-white-500 uppercase tracking-wide leading-none">Project</motion.span>
                             <motion.h1
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -102,56 +162,19 @@ export default function ProjectDetailPage({ project, previousProject, nextProjec
                                 {project.title}
                             </motion.h1>
                         </div>
-                    </div>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6 }}
-                        className='flex items-center'
-                    >
-                        {isFullscreen && (
-                            <button
-                                onClick={toggleFullscreen}
-                                className="   z-50 text-white bg-black/50 p-2 rounded-full hover:bg-black/70 transition"
-                            >
-                                <MdOutlineFullscreenExit size={22} />
-                            </button>
+                    }
+                    {/* Description */}
+                    <div className="space-y-4 text-base leading-relaxed px-4 h-full">
+                        {project?.description ? (
+                            <div className="text-white-700" dangerouslySetInnerHTML={{ __html: project.description }} />
+                        ) : (
+                            <div className="p-5 ">
+                                <p className="text-white-700 text-center">Content will be available soon. </p>
+                            </div>
                         )}
-                        <Link
-                            href={project.src}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex text-sm items-center gap-3 hover:underline text-white font-semibold rounded-lg"
-                        >
-                            <span className='md:block hidden'>Visit Page</span> <FaArrowRightLong />
-                        </Link>
-
-                    </motion.div>
+                    </div>
                 </div>
 
-                {/* Image */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                >
-                    <img
-                        src={project.path}
-                        alt={project.title}
-                        className="w-full h-auto shadow-lg mb-6"
-                    />
-                </motion.div>
-
-                {/* Description */}
-                <div className="space-y-4 text-base leading-relaxed px-4">
-                    {project?.description ? (
-                        <div className="text-white-700" dangerouslySetInnerHTML={{ __html: project.description }} />
-                    ) : (
-                        <div className="p-5">
-                            <p className="text-white-700 text-center">Content will be available soon. </p>
-                        </div>
-                    )}
-                </div>
 
                 {/* Prev / Next Navigation */}
                 {(previousProject || nextProject) && (
