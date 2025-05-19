@@ -76,7 +76,7 @@ export default function ProjectDetailPage({ project, previousProject, nextProjec
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 className={`rounded-2xl shadow-xl overflow-auto z-40 relative 
                 ${isFullscreen
-                        ? 'h-screen p-6 md:p-10'
+                        ? 'h-screen p-6 md:p-10 mt-10'
                         : 'max-h-[calc(100vh-250px)] h-full px-5'
                     }`}
             >
