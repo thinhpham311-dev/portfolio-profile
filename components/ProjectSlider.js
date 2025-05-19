@@ -11,13 +11,10 @@ import { FaUserClock } from 'react-icons/fa';
 import { PROJECTLIST_DATA } from '../constants';
 
 const ProjectSlider = () => {
-  // Lấy tất cả companyKey từ PROJECTLIST_DATA
   const companyKeys = PROJECTLIST_DATA.slides.map((slide) => slide.companyKey);
 
-  // Set công ty mặc định là công ty đầu tiên theo companyKey
   const [selectedCompanyKey, setSelectedCompanyKey] = useState(companyKeys[0]);
 
-  // Lọc các hình ảnh theo companyKey đã chọn
   const filteredImages = PROJECTLIST_DATA.slides.find(
     (slide) => slide.companyKey === selectedCompanyKey
   )?.images || [];
@@ -39,15 +36,14 @@ const ProjectSlider = () => {
                 : 'bg-gray-200 text-gray-700 hover:bg-violet-100'
                 }`}
             >
-              {companyName} {/* Hiển thị tên công ty */}
+              {companyName}
             </button>
           );
         })}
       </div>
 
-      {/* Slider */}
       <Swiper
-        key={selectedCompanyKey} // Re-render khi thay đổi công ty
+        key={selectedCompanyKey}
         pagination={{ clickable: true }}
         navigation={true}
         spaceBetween={20}
@@ -61,7 +57,7 @@ const ProjectSlider = () => {
         {filteredImages.length > 0 ? (
           filteredImages.map((image, idx) => (
             <SwiperSlide key={idx}>
-              <div className="relative overflow-hidden rounded-lg group bg-black h-[25vh] md:h-[30vh] lg:h-[30vh] flex items-center justify-center">
+              <div className="relative overflow-hidden rounded-lg group bg-black  flex items-center justify-center">
 
                 {/* Logo Công ty */}
                 <div className="absolute top-2 right-2 bg-black bg-opacity-70 p-2 rounded-full z-10">
@@ -74,23 +70,20 @@ const ProjectSlider = () => {
                   </a>
                 </div>
 
-                {/* Hình ảnh chính */}
                 <Image
                   src={image.path}
                   alt={image.title}
                   width={500}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                  className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-110"
                 />
 
-                {/* Overlay Link */}
                 <Link
-                  href={image.src}
-                  target="_blank"
+                  href={`/project/${image.slug}`}
                   className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-80 transition-all duration-300"
                 >
                   <span className="text-white font-semibold flex items-center gap-2">
-                    Visit Page <FiExternalLink />
+                    View More <FiExternalLink />
                   </span>
                 </Link>
 

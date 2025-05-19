@@ -155,38 +155,44 @@ export const PROJECTLIST_DATA = {
       images: [
         {
           title: 'TNB AURA',
+          slug: 'tnb-aura',
           path: '/projects/project-TNB_Aura.png',
           src: 'https://tnbaura.vc',
           companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'Not So Little Fair',
+          slug: 'not-so-little-fair',
           path: '/projects/project-Not_So_Little_Fair.png',
           src: 'https://rsvp.notsolittlefair.com',
           companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'NTUC Conversation',
+          slug: 'ntuc-conversation',
           path: '/projects/project-NTUC_Conversation.png',
           src: "https://conversations.ntuc.sg",
           companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'Golf Live',
+          slug: 'golf-live',
           path: '/projects/project-Golf_Live.png',
           src: "https://www.igx360.com/vi-VN",
           companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'Child Ed',
+          slug: 'child-ed',
           path: '/projects/project-Child_Ed.png',
           src: "https://www.childed.com.sg/",
           companyImage: '/logo/logo-techvsi.webp',
         },
         {
           title: 'Sony ZV Story',
+          slug: 'sony-zv-story',
           path: '/projects/project-Sony_ZV_Story.png',
-          src: "https://alphauniverse.sony-asia.com/microsite/your-zv-story",
+          src: "https://alphauniverse.sony-asia.com/sites/default/files/minisite/static/5b515869-92e4-4a1a-a873-9dfce76b00ce/ap_1740_03Feb2023/index.html",
           companyImage: '/logo/logo-techvsi.webp',
         },
       ],
@@ -197,32 +203,37 @@ export const PROJECTLIST_DATA = {
       images: [
         {
           title: 'Maxwell Reserve',
+          slug: 'maxwell-reserve',
           path: '/projects/project-Maxwell_Reserve.png',
           src: "https://maxwellreserve.com",
           companyImage: '/logo/logo-antking.webp',
         },
         {
           title: 'Officers Mess Polo Bar',
+          slug: 'officers-mess-polo-bar',
           path: '/projects/project-Officer_Polo_Bar.png',
           src: "https://officersmesspolobar.sg",
           companyImage: '/logo/logo-antking.webp',
         },
         {
           title: 'Shikar',
+          slug: 'shikar',
           path: '/projects/project-Shikar.png',
           src: "https://shikar.sg",
           companyImage: '/logo/logo-antking.webp',
         },
         {
           title: 'Chess DB',
+          slug: 'chess-db',
           path: '/projects/project-Chess_DB.png',
           src: "https://chessdb.vn",
           companyImage: '/logo/logo-antking.webp',
         },
         {
           title: 'Sidekick Find Expert',
+          slug: 'sidekick-find-expert',
           path: '/projects/project-Sidekick.png',
-          src: "https://play.google.com/store/apps/details?id=com.sidekick.android",
+          src: "https://www.getasidekick.com/",
           companyImage: '/logo/logo-antking.webp',
         },
 
@@ -233,7 +244,8 @@ export const PROJECTLIST_DATA = {
       companyKey: 'paptech-company',
       images: [
         {
-          title: 'Bado Catalog',
+          title: 'Bado Information',
+          slug: 'bado-information',
           path: '/projects/project-Bado_Catalog.png',
           src: "https://bado.vn/",
           companyImage: '/logo/logo-paptech.webp',
@@ -245,32 +257,38 @@ export const PROJECTLIST_DATA = {
       companyKey: 'personal-project',
       images: [
         {
-          title: 'title',
+          title: 'Portfolio Profile',
+          slug: 'portfolio-profile',
           path: '/projects/project-Portfolio_Profile.png',
           src: "https://phamtrithinh-0702895474-fewebdeveloper.vercel.app",
         },
         {
-          title: 'title',
+          title: 'Catalog Business Animation',
+          slug: 'catalog-business-animation',
           path: '/projects/project-Magma_Clone.png',
           src: "https://catalog-business.vercel.app",
         },
         {
-          title: 'title',
+          title: 'Chat Gpt Clone',
+          slug: 'chatGpt-clone',
           path: '/projects/project-ChatGPT_Clone.png',
           src: "https://chat-gpt-thinhpham.vercel.app",
         },
         {
           title: 'PTT Movies',
+          slug: 'ptt-movies',
           path: '/projects/project-PTT_Movies.png',
           src: "https://pttmovies.vercel.app",
         },
         {
           title: 'Ecommerce Test Local',
+          slug: 'ecommerce-test-local',
           path: '/projects/project-Ecommerce-Local.png',
           src: "https://ecommerce-test-vert.vercel.app",
         },
         {
           title: 'Market Place',
+          slug: 'market-place',
           path: '/projects/project-Market_Place.png',
           src: "https://market-place-web-gilt.vercel.app/",
         },
@@ -278,3 +296,4 @@ export const PROJECTLIST_DATA = {
     },
   ],
 };
+
