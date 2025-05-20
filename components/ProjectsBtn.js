@@ -12,7 +12,6 @@ const ProjectsBtn = () => {
     <Image src="/rounded-text.png" className="animate-spin-slow w-full h-full xl:max-w-[141px] xl:max-h-[148px] max-w-[115px] max-h-[120px]" height={148} width={141} alt="" />
     <HiArrowRight className="absolute text-4xl group-hover:translate-x-2 transition-all duration-300" />
   </Link>
-
 };
 
 export default ProjectsBtn;

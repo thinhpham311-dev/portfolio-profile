@@ -1,4 +1,6 @@
 'use client'
+
+import MetaData from "../../components/MetaData"
 import ParticlesContainer from "../../components/ParticlesContainer"
 import ProjectDetail from "../../components/ProjectDetail"
 import { motion } from 'framer-motion'
@@ -27,25 +29,31 @@ export default function ProjectDetailPage() {
     }, [query.slug])
 
     return (
-        <div className="h-full relative">
-            <ParticlesContainer />
-            <div className="container mx-auto z-50">
+        <>
+            <MetaData
+                title={`My Portfolio | Project - ${project?.title}`}
+                description="Portfolio cá nhân của Thinh Pham - Web Developer"
+            />
+            <div className="h-full relative">
+                <ParticlesContainer />
+                <div className="container mx-auto z-50">
 
-                <motion.div
-                    className="w-full mx-auto"
-                    variants={fadeIn('down', 0.5)}
-                    initial="hidden"
-                    animate="show"
-                    exit="hidden"
-                >
-                    <ProjectDetail
-                        query={query}
-                        project={project}
-                        previousProject={previousProject}
-                        nextProject={nextProject}
-                    />
-                </motion.div>
+                    <motion.div
+                        className="w-full mx-auto"
+                        variants={fadeIn('down', 0.5)}
+                        initial="hidden"
+                        animate="show"
+                        exit="hidden"
+                    >
+                        <ProjectDetail
+                            query={query}
+                            project={project}
+                            previousProject={previousProject}
+                            nextProject={nextProject}
+                        />
+                    </motion.div>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
