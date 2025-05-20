@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 
 const MetaData = ({
-    title = 'My Portfolio | ThinhPham',
+    title = 'My Portfolio | Loading...',
     description = 'Portfolio of Thinh Pham - A creative and skilled web developer.',
     keywords = 'web developer, portfolio, react, next.js, frontend, thinh pham',
     image = '/default-og-image.jpg',
