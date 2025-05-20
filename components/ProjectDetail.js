@@ -13,6 +13,7 @@ import {
     MdOutlineChevronRight
 } from "react-icons/md"
 import { FaUserClock } from 'react-icons/fa'
+import { LoadingImage } from './Loading'
 
 
 const Breadcrumb = memo(({ title, toggleFullscreen }) => (
@@ -180,13 +181,11 @@ export default function ProjectDetailPage({ project, previousProject, nextProjec
                         toggleDarkMode={toggleDarkMode}
                     />
 
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-                        <img
-                            src={project.path}
-                            alt={project.title}
-                            className="w-full h-auto shadow-lg mb-6"
-                        />
-                    </motion.div>
+                    <LoadingImage
+                        src={project.path}
+                        alt={project.title}
+                        className="w-full h-auto shadow-lg mb-6"
+                    />
 
                     {/* Title in fullscreen */}
                     {isFullscreen && (

@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaUserClock } from 'react-icons/fa';
-
+import { LoadingImage } from './Loading';
 import { PROJECTLIST_DATA } from '../constants';
 
 const ProjectSlider = () => {
@@ -70,12 +70,12 @@ const ProjectSlider = () => {
                   </a>
                 </div>
 
-                <Image
+                <LoadingImage
                   src={image.path}
                   alt={image.title}
                   width={500}
-                  height={300}
-                  className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-110"
+                  height={200}
+                  className="object-contain w-full h-full"
                 />
 
                 <Link
