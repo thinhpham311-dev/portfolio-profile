@@ -11,41 +11,39 @@ import { LoadingImage } from './Loading';
 import { PROJECTLIST_DATA } from '../constants';
 
 const ProjectSlider = () => {
-  const companyKeys = PROJECTLIST_DATA.slides.map((slide) => slide.companyKey);
-
+  const slides = PROJECTLIST_DATA.slides;
+  const companyKeys = slides.map((slide) => slide.companyKey);
   const [selectedCompanyKey, setSelectedCompanyKey] = useState(companyKeys[0]);
 
-  const filteredImages = PROJECTLIST_DATA.slides.find(
-    (slide) => slide.companyKey === selectedCompanyKey
-  )?.images || [];
+  const selectedSlide = slides.find((slide) => slide.companyKey === selectedCompanyKey);
+  const filteredImages = selectedSlide?.images || [];
+
+  const getCompanyName = (key) =>
+    slides.find((slide) => slide.companyKey === key)?.companyName || 'Unknown';
 
   return (
     <div className="w-full max-w-[1400px] mx-auto px-4">
-
       {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-3 mb-6 relative z-50">
-        {companyKeys.map((companyKey, idx) => {
-          const companyName = PROJECTLIST_DATA.slides.find(slide => slide.companyKey === companyKey)?.companyName;
-
-          return (
-            <button
-              key={idx}
-              onClick={() => setSelectedCompanyKey(companyKey)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${selectedCompanyKey === companyKey
-                ? 'bg-violet-500 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-violet-100'
-                }`}
-            >
-              {companyName}
-            </button>
-          );
-        })}
+        {companyKeys.map((key) => (
+          <button
+            key={key}
+            onClick={() => setSelectedCompanyKey(key)}
+            className={` rounded-full text-sm xl:text-lg font-semibold capitalize transition-all relative after:w-8 after:h-[2px] after:absolute after:-bottom-1 after:left-0 ${selectedCompanyKey === key
+              ? 'text-accent after:!bg-accent after:w-full after:transition-all after:duration-300'
+              : 'bg-transparent text-white after:bg-white'
+              }`}
+          >
+            {getCompanyName(key)}
+          </button>
+        ))}
       </div>
 
+      {/* Swiper */}
       <Swiper
         key={selectedCompanyKey}
         pagination={{ clickable: true }}
-        navigation={true}
+        navigation
         spaceBetween={20}
         modules={[Pagination, Navigation]}
         breakpoints={{
@@ -57,19 +55,25 @@ const ProjectSlider = () => {
         {filteredImages.length > 0 ? (
           filteredImages.map((image, idx) => (
             <SwiperSlide key={idx}>
-              <div className="relative overflow-hidden rounded-lg group bg-black  flex items-center justify-center">
-
-                {/* Logo Công ty */}
+              <div className="relative overflow-hidden rounded-lg group bg-black flex items-center justify-center">
+                {/* Company Logo */}
                 <div className="absolute top-2 right-2 bg-black bg-opacity-70 p-2 rounded-full z-10">
                   <a href={image?.src} target="_blank" rel="noopener noreferrer">
                     {image?.companyImage ? (
-                      <Image src={image.companyImage} width={24} height={24} alt="Company" />
+                      <Image
+                        src={image.companyImage}
+                        width={24}
+                        height={24}
+                        alt="Company"
+                        className="object-contain"
+                      />
                     ) : (
                       <FaUserClock className="text-white" />
                     )}
                   </a>
                 </div>
 
+                {/* Project Image */}
                 <LoadingImage
                   src={image.path}
                   alt={image.title}
@@ -78,6 +82,7 @@ const ProjectSlider = () => {
                   className="object-contain w-full h-full"
                 />
 
+                {/* Overlay Link */}
                 <Link
                   href={`/project/${image.slug}`}
                   className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-80 transition-all duration-300"
@@ -86,7 +91,6 @@ const ProjectSlider = () => {
                     View More <FiExternalLink />
                   </span>
                 </Link>
-
               </div>
             </SwiperSlide>
           ))

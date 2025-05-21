@@ -42,8 +42,8 @@ const Contact = () => {
       return;
     }
     try {
-      setSetting({ loading: true, status: "success", error: "Send to successfully" })
       await sendContactForm(inputFields)
+      setSetting({ loading: true, status: "success", error: "Send to successfully" })
     } catch (error) {
       setSetting({ loading: false, status: "error", error: error.message })
     } finally {

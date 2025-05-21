@@ -8,7 +8,9 @@ export const sendContactForm = async (data) => {
         }
     }).then((res) => {
         console.log(res)
-        if(!res.ok) throw new Error("Failed to send message")
+        if (!res.ok) {
+            throw new Error("Failed to send message")
+        }
         return res.json();
     })
 }
