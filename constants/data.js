@@ -292,7 +292,7 @@ export const PROJECTLIST_DATA = {
           title: 'Chat Gpt Clone',
           slug: 'chatGpt-clone',
           path: '/projects/project-ChatGPT_Clone.png',
-          src: "https://chat-gpt-thinhpham.vercel.app",
+          src: "https://chat-gpt-thinhpham.vercel.app/",
         },
         {
           title: 'PTT Movies',

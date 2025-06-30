@@ -84,11 +84,13 @@ const ProjectSlider = () => {
 
                 {/* Overlay Link */}
                 <Link
-                  href={`/project/${image.slug}`}
+                  href={image.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-80 transition-all duration-300"
                 >
                   <span className="text-white font-semibold flex items-center gap-2">
-                    View More <FiExternalLink />
+                    Visit Page <FiExternalLink />
                   </span>
                 </Link>
               </div>
